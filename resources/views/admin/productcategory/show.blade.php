@@ -35,7 +35,7 @@
 
 
 	<div style="margin-right:auto; margin-left:500px;">
-		<button class="btn btn-warning">&larr; Back</button>
+		<button class="btn btn-warning"><a href="/admin/productcategory">&larr; Back</a></button>
 	</div>
 
 

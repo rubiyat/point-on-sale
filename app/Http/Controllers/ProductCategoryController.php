@@ -81,4 +81,11 @@ class ProductCategoryController extends Controller
     {
         //
     }
+
+    public function back() {
+
+        return redirect()->back();
+
+    }
+
 }
