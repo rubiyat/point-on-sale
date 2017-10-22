@@ -23,6 +23,10 @@ Route::get('/admin/productcategory', function () {
     return view('admin.productcategory.index');
 });
 
+Route::get('/admin/productcategory/edit', function () {
+    return view('admin.productcategory.edit');
+});
+
 Route::get('/admin/productcategory/show', function () {
     return view('admin.productcategory.show');
 });
