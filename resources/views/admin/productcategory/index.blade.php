@@ -6,7 +6,7 @@
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
-	<button class="btn btn-primary" style="margin-bottom: 20px;">New Product Category</button>
+    <a href="{{url('admin/productcategory/create')}}"><button class="btn btn-primary" style="margin-bottom: 20px;">New Product Category</button></a>
 	
 	<table class="table table-bordered table-hover">
 	    <thead class="thead-inverse">
@@ -23,8 +23,8 @@
 	        <td></td>
 	        <td></td>
 	        <td></td>
-	        <td><button class="btn btn-info">Show</button></td>
-	        <td><button class="btn btn-success">Edit</button></td>
+            <td><a href="{{url('/admin/productcategory/show')}}"><button class="btn btn-info">Show</button></a></td>
+            <td><a href="{{url('/admin/productcategory/edit')}}"><button class="btn btn-success">Edit</button></a></td>
 	        <td><button class="btn btn-danger">Delete</button></td>
 	      </tr>
 	      <tr>
@@ -32,8 +32,8 @@
 	        <td></td>
 	        <td></td>
 	        <td></td>
-	        <td><button class="btn btn-info">Show</button></td>
-	        <td><button class="btn btn-success">Edit</button></td>
+			<td><a href="{{url('/admin/productcategory/show')}}"><button class="btn btn-info">Show</button></a></td>
+	        <td><a href="{{url('/admin/productcategory/edit')}}"><button class="btn btn-success">Edit</button></a></td>
 	        <td><button class="btn btn-danger">Delete</button></td>
 	      </tr>
 	      <tr>
@@ -41,8 +41,8 @@
 	        <td></td>
 	        <td></td>
 	        <td></td>
-	       	<td><button class="btn btn-info">Show</button></td>
-	        <td><button class="btn btn-success">Edit</button></td>
+			<td><a href="{{url('/admin/productcategory/show')}}"><button class="btn btn-info">Show</button></a></td>
+            <td><a href="{{url('/admin/productcategory/edit')}}"><button class="btn btn-success">Edit</button></a></td>
 	        <td><button class="btn btn-danger">Delete</button></td>
 	      </tr>
 	      <tr>
@@ -50,8 +50,8 @@
 	        <td></td>
 	        <td></td>
 	        <td></td>
-	        <td><button class="btn btn-info">Show</button></td>
-	        <td><button class="btn btn-success">Edit</button></td>
+	        <td><a href="{{url('/admin/productcategory/show')}}"><button class="btn btn-info">Show</button></a></td>
+            <td><a href="{{url('/admin/productcategory/edit')}}"><button class="btn btn-success">Edit</button></a></td>
 	        <td><button class="btn btn-danger">Delete</button></td>
 	      </tr>
 	    </tbody>
