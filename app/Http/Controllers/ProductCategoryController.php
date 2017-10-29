@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\ProductCategory;
+
 class ProductCategoryController extends Controller
 {
     /**
@@ -13,7 +15,11 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        //
+
+        $productCategories = ProductCategory::all();
+
+        return view('admin.productcategory.index', compact('productCategories'));
+
     }
 
     /**
@@ -45,7 +51,13 @@ class ProductCategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $productCategory = ProductCategory::findOrFail($id);
+
+        $categoriesShow = $productCategory->all();
+
+        return view('admin.productcategory.show', compact('categoriesShow'));
+
     }
 
     /**
@@ -80,12 +92,6 @@ class ProductCategoryController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function back() {
-
-        return redirect()->back();
-
     }
 
 }

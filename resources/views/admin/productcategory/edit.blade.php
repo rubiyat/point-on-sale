@@ -34,9 +34,9 @@
         </div>
 
         <div class="btn-group">
-
-            <button class="btn btn-primary">Update</button>
-            <button class="btn btn-danger">Cancel</button>
+                
+                <a href=""><button class="btn btn-primary">Update</button></a>
+            <input type="button" name="buttonCancel" class="btn btn-danger" onclick="window.location='/admin/productcategory';" value="Cancel">
 
         </div>
 

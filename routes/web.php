@@ -15,18 +15,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+Route::group(['middleware'=>'web'], function(){
 
-Route::get('/admin/productcategory', function () {
-    return view('admin.productcategory.index');
-});
+    Route::get('/admin', function(){
 
-Route::get('/admin/productcategory/edit', function () {
-    return view('admin.productcategory.edit');
-});
+        return view('admin.index');
 
-Route::get('/admin/productcategory/show', function () {
-    return view('admin.productcategory.show');
+
+
+
+    });
+
+	Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
+
+
+    	'index'=>'admin.productcategory.index',
+    	'create'=>'admin.productcategory.create',
+    	'store'=>'admin.productcategory.store',
+    	'edit'=>'admin.productcategory.edit',
+        'show'=>'admin.productcategory.show'
+
+
+
+
+
+
+	]]);
+
 });
