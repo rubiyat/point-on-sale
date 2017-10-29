@@ -49,8 +49,13 @@
 	</table>
 
 
+<<<<<<< HEAD
 	<div style="margin-right:auto; margin-left:500px;">
 		<input type="button" name="buttonBack" class="btn btn-warning" onclick="window.location='/admin/productcategory';" value="&larr;Back">
+=======
+	<div>
+		<a href="{{url('/admin/productcategory')}}"><button class="btn btn-warning">&larr; Back</button></a>
+>>>>>>> 821a885e863b15dad15815e3e86f1014a4ea798a
 	</div>
 
 
