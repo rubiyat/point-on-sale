@@ -19,17 +19,7 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::get('/admin', function(){
 
-<<<<<<< HEAD
         return view('admin.index');
-=======
-Route::get('/admin/productcategory/create', function () {
-    return view('admin.productcategory.create');
-});
-
-Route::get('/admin/productcategory/edit', function () {
-    return view('admin.productcategory.edit');
-});
->>>>>>> 821a885e863b15dad15815e3e86f1014a4ea798a
 
 
 
