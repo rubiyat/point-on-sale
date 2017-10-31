@@ -43,3 +43,7 @@ Route::group(['middleware'=>'web'], function(){
 	]]);
 
 });
+
+Route::get('/admin/productcategory/create', function () {
+    return view('admin.productcategory.create');
+});
