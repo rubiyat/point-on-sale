@@ -26,24 +26,24 @@ Route::group(['middleware'=>'web'], function(){
 
     });
 
-	Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
+    Route::resource('admin/productcategory', 'ProductCategoryController');
+
+	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
 
 
-    	'index'=>'admin.productcategory.index',
-    	'create'=>'admin.productcategory.create',
-    	'store'=>'admin.productcategory.store',
-    	'edit'=>'admin.productcategory.edit',
-        'show'=>'admin.productcategory.show'
+ //    	'index'=>'admin.productcategory.index',
+ //    	'create'=>'admin.productcategory.create',
+ //    	'store'=>'admin.productcategory.store',
+ //    	'edit'=>'admin.productcategory.edit',
+ //        'show'=>'admin.productcategory.show',
 
 
 
 
 
 
-	]]);
+	// ]]);
 
 });
 
-Route::get('/admin/productcategory/create', function () {
-    return view('admin.productcategory.create');
-});
+

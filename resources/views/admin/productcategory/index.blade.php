@@ -6,8 +6,9 @@
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
-	<input type="button" name="buttonNewCategory" style="margin-bottom: 20px;" class="btn btn-primary" onclick="window.location='#';" value="New Product Category">
-
+	<!-- <input type="button" name="buttonNewCategory" style="margin-bottom: 20px;" class="btn btn-primary" value="New Product Category">
+ -->
+ <a class="btn btn-primary" href="{{ route('admin.productcategory.create')}}">New Product Category </a>
 
             <table class="table table-bordered table-hover table-responsive">
                 <thead>
