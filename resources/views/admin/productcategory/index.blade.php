@@ -2,13 +2,23 @@
 
 @section('content')
 
+    <style type="text/css">
+        
+        #aTag:hover { color:  #428bca; }
+        #aTag:visited { color: none; }
+
+    </style>
+
 	<h1>Product Category</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / Product Category</h2>
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
-	<input type="button" name="buttonNewCategory" style="margin-bottom: 20px;" class="btn btn-primary" onclick="window.location='#';" value="New Product Category">
+<!-- 	<input type="button" name="buttonNewCategory" style="margin-bottom: 20px;" class="btn btn-primary" onclick="window.location='#';" value="New Product Category"> -->
 
-
+<div class="input-prepend">
+    <span class="add-on" style="border-radius: 5px 0px 0px 5px; background-color: #C0C0C0; height: 24.5px; width: 25px;"><a id="aTag" style="text-decoration:none;" href=""><i class="icon-plus icon-large"></i></a></span>
+    <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Category</a>
+</div>
             <table class="table table-bordered table-hover table-responsive">
                 <thead>
                 <tr>
