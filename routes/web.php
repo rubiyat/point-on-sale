@@ -21,9 +21,6 @@ Route::group(['middleware'=>'web'], function(){
 
         return view('admin.index');
 
-
-
-
     });
 
     Route::resource('admin/productcategory', 'ProductCategoryController');
@@ -38,11 +35,9 @@ Route::group(['middleware'=>'web'], function(){
  //        'show'=>'admin.productcategory.show',
 
 
-
-
-
-
 	// ]]);
+
+    Route::resource('admin/supplier', 'SupplierController');
 
 });
 
