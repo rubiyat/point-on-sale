@@ -25,18 +25,18 @@
             <label for="category_status">Status</label>
             <select name="category_status" id="" class="form-control">
 
-                <option value="">Active</option>
+                <option value="">Approved</option>
 
-                <option value="">Inactive</option>
+                <option value="">Unapproved</option>
 
             </select>
 
         </div>
 
-        <div class="btn-group">
+        <div class="form-group">
                 
-                <a href=""><button class="btn btn-primary">Update</button></a>
-            <input type="button" name="buttonCancel" class="btn btn-danger" onclick="window.location='/admin/productcategory';" value="Cancel">
+            <a href="" class="btn btn-primary">Update</a>
+            <a href="{{route('productcategory.index')}}" class="btn btn-default">Cancel</a>
 
         </div>
 
