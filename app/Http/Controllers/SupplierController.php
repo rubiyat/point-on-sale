@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+<<<<<<< HEAD
 use App\Supplier;
 
+=======
+>>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
 class SupplierController extends Controller
 {
     /**
@@ -15,11 +18,15 @@ class SupplierController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
 
         $suppliers = Supplier::all();
 
         return view('admin.supplier.index', compact('suppliers'));
 
+=======
+        //
+>>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
     }
 
     /**
@@ -51,6 +58,7 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
         
         // $productCategory = ProductCategory::findOrFail($id);
 
@@ -58,6 +66,9 @@ class SupplierController extends Controller
 
         // return view('admin.productcategory.show', compact('categoriesShow'));
 
+=======
+        //
+>>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
     }
 
     /**
@@ -93,5 +104,8 @@ class SupplierController extends Controller
     {
         //
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
 }
