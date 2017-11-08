@@ -28,6 +28,8 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/productcategory', 'ProductCategoryController');
 
+    Route::resource('admin/supplier', 'SupplierController');
+
 	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
 
 

@@ -9,13 +9,13 @@
 
     </style>
 
-	<h1>Product Category</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / Product Category</h2>
+	<h1>Supplier's Details</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / Suppliers</h2>
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
 <div class="input-prepend">
     <span class="add-on" style="border-radius: 5px 0px 0px 5px; background-color: #C0C0C0; height: 24.5px; width: 25px;"><a id="aTag" style="text-decoration:none;" href=""><i class="icon-plus icon-large"></i></a></span>
-    <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Category</a>
+    <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Supplier</a>
 </div>
 
 
@@ -23,30 +23,30 @@
         <thead>
         <tr>
             <th>SL</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Status</th>
+            <th>Company Name</th>
+            <th>Email</th>
+            <th>Phone</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
 
-        @if($productCategories)
+        @if($suppliers)
 
-            @foreach($productCategories as $productCategory)
+            @foreach($suppliers as $supplier)
 
                 <tr>
 
-                    <td>{{$productCategory->id}}</td>
-                    <td>{{$productCategory->name}}</td>
-                    <td>{{$productCategory->description}}</td>
-                    <td>{{$productCategory->status}}</td>
+                    <td>{{$supplier->id}}</td>
+                    <td>{{$supplier->company_name}}</td>
+                    <td>{{$supplier->email}}</td>
+                    <td>{{$supplier->phone}}</td>
 
                        
                     <td>
-                        <a href="{{route('productcategory.show', $productCategory->id)}}" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
+                        <a href="{{route('supplier.show', $supplier->id)}}" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
 
-                        <a class="btn btn-info" href="{{route('productcategory.edit', $productCategory->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
+                        <a class="btn btn-info" href="{{route('supplier.edit', $supplier->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
 
                         <a href="#" class="btn btn-danger"><i class="icon-trash"></i><span class="hidden-tablet"> Delete</span></a>
 
