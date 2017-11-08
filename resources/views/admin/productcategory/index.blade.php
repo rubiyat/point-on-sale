@@ -13,36 +13,11 @@
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
-<<<<<<< HEAD
-<div class="input-prepend">
-    <span class="add-on" style="border-radius: 5px 0px 0px 5px; background-color: #C0C0C0; height: 24.5px; width: 25px;"><a id="aTag" style="text-decoration:none;" href=""><i class="icon-plus icon-large"></i></a></span>
-    <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Category</a>
-</div>
 
-=======
     <div class="input-prepend">
         <span class="add-on" style="border-radius: 5px 0px 0px 5px; background-color: #C0C0C0; height: 24.5px; width: 25px;"><a id="aTag" style="text-decoration:none;" href=""><i class="icon-plus icon-large"></i></a></span>
         <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Category</a>
     </div>
->>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
-
-    <table class="table table-bordered table-hover table-responsive">
-        <thead>
-        <tr>
-            <th>SL</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-
-<<<<<<< HEAD
-        @if($productCategories)
-=======
-        <a class="btn btn-primary" href="{{route('productcategory.create')}}">New Product Category </a>
->>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
 
         <table class="table table-bordered table-hover table-responsive">
             <thead>
@@ -50,22 +25,16 @@
                 <th>SL</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Status</th>
                 <th>Action</th>
-                <th></th>
             </tr>
             </thead>
             <tbody>
 
             @if($productCategories)
-
-
-<<<<<<< HEAD
                        
-                    <td>
-                        <a href="{{route('productcategory.show', $productCategory->id)}}" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
-=======
+
                 @foreach($productCategories as $productCategory)
->>>>>>> e566454233c1674c7143547dd991fcfdfbd892e3
 
                     <tr>
 
@@ -76,7 +45,7 @@
 
 
                         <td>
-                            <a href="{{route('productcategory.show', $productCategory->id)}}" class="btn btn-warning"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
+                            <a href="{{route('productcategory.show', $productCategory->id)}}" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
 
                             <a class="btn btn-info" href="{{route('productcategory.edit', $productCategory->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
 

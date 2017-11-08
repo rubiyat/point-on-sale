@@ -337,7 +337,7 @@
  					<ul class="nav nav-tabs nav-stacked main-menu">
  						<li><a href="{{url('/admin')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                         <li><a href="{{url('/admin/productcategory')}}"><i class="icon-align-justify"></i><span class="hidden-tablet"> Product Category</span></a></li>
-                        <li><a href="{{url('/admin/supplier')}}"><i class=""></i><span class="hidden-tablet"> Suppliers</span></a></li>
+                        <li><a href="{{url('/admin/supplier')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Suppliers</span></a></li>
  						<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
  						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
  						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>

@@ -39,8 +39,6 @@ Route::group(['middleware'=>'web'], function(){
 
 	// ]]);
 
-    Route::resource('admin/supplier', 'SupplierController');
-
 });
 
 
