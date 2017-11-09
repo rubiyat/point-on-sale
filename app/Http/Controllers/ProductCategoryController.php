@@ -29,7 +29,7 @@ class ProductCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.productcategory.create');
     }
 
     /**
@@ -40,7 +40,9 @@ class ProductCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $productCategory = new ProductCategory();
+        $productCategory->create($request->all());
+        return redirect('admin/productcategory');
     }
 
     /**

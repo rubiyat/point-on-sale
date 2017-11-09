@@ -5,7 +5,7 @@
 					<h3>Add New Product Category</h3>
 					<hr>
 
-<!-- <div class="col-md-12">
+<div class="col-md-12">
   <form action="{{route('productcategory.store')}}" method="POST">
     {{ csrf_field() }}
 
@@ -35,7 +35,7 @@
 
 
 </div>
- -->
+
 
 	
 @stop
