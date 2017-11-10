@@ -71,6 +71,9 @@ class ProductCategoryController extends Controller
     public function edit($id)
     {
         //
+        
+        $productCategory = ProductCategory::findorfail($id);
+        return view('admin.productcategory.edit', compact('productCategory'));
     }
 
     /**
@@ -83,6 +86,10 @@ class ProductCategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
+        
+        $productCategory = ProductCategory::find($id);
+        $productCategory->update($request->all());
+        return redirect('admin/productcategory');
     }
 
     /**
@@ -94,6 +101,7 @@ class ProductCategoryController extends Controller
     public function destroy($id)
     {
         //
+        
     }
 
 }

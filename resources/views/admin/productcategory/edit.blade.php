@@ -4,30 +4,30 @@
 
     <h1>Edit Product Category</h1>
 
-    <form action="" method="">
-
+    <form action="{!! action('ProductCategoryController@update', $productCategory->id) !!}" method="POST">
+    {{ csrf_field() }} {{ method_field('PATCH') }}
         <div class="form-group">
 
             <label for="category_name">Category Name</label>
-            <input type="text" name="category_name" class="form-control">
+            <input type="text" name="name" class="form-control" value="{{$productCategory->name}}">
 
         </div>
 
         <div class="form-group">
 
             <label for="category_description">Description</label>
-            <input type="text" name="category_description" class="form-control">
+            <input type="text" name="description" class="form-control" value="{{$productCategory->description}}">
 
         </div>
 
         <div class="form-group">
 
             <label for="category_status">Status</label>
-            <select name="category_status" id="" class="form-control">
+            <select name="status" value="{{$productCategory->status}}" class="form-control">
 
-                <option value="">Approved</option>
+                <option value="1">Approved</option>
 
-                <option value="">Unapproved</option>
+                <option value="2">Unapproved</option>
 
             </select>
 
@@ -35,7 +35,7 @@
 
         <div class="form-group">
                 
-            <a href="" class="btn btn-primary">Update</a>
+            <input type="submit" name="submit" class="btn btn-primary" value="Submit">
             <a href="{{route('productcategory.index')}}" class="btn btn-default">Cancel</a>
 
         </div>
