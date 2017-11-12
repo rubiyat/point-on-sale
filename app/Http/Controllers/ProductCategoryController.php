@@ -102,6 +102,11 @@ class ProductCategoryController extends Controller
     {
         //
         
+        ProductCategory::findOrFail($id)->delete();
+        return redirect('admin/productcategory');
+        
+
+        
     }
 
 }
