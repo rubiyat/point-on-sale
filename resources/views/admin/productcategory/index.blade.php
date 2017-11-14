@@ -45,7 +45,7 @@
 
                              <form action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST">
                                 {{ csrf_field() }} {{ method_field('DELETE') }}
-                                <input class="btn btn-danger" type="submit" name="submit" value="Delete" style="margin-left: 42px; margin-top: 6px;">
+                                <input class="btn btn-danger right" type="submit" name="submit" value="Delete" style="margin-top: 6px; margin-left: 40px;">
                             </form>
 
                         </td>
