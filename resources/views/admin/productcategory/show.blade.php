@@ -6,12 +6,7 @@
 	
 	<table class="table table-bordered table-hover table-responsive">
 	    <thead class="thead-inverse">
-<!-- 	      <tr>
-	        <th>SL</th>
-	        <th>Name</th>
-	        <th>Description</th>
-	        <th>Action</th>
-	      </tr> -->
+
 	    </thead>
 	    <tbody>
 	      <tr>

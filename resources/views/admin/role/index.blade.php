@@ -9,14 +9,14 @@
 
     </style>
 
-	<h1>role's Details</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / roles</h2>
+	<h1>Role's Details</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / roles</h2>
 
 	<hr style="border-top: solid #DCDCDC 1px;">
 
-<div class="input-prepend">
-    <span class="add-on" style="border-radius: 5px 0px 0px 5px; background-color: #C0C0C0; height: 24.5px; width: 25px;"><a id="aTag" style="text-decoration:none;" href=""><i class="icon-plus icon-large"></i></a></span>
-    <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Add Role</a>
-</div>
+
+  
+    <a href="{{ route('role.create') }}" class="btn btn-primary" style="margin-bottom: 15px;">Add Role</a>
+
 
 
    <table class="table table-bordered table-hover table-responsive">
