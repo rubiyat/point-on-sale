@@ -94,6 +94,7 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Role::findorFail($id)->delete();
+        return redirect('admin/role');
     }
 }
