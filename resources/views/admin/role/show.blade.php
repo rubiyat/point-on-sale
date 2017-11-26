@@ -1,8 +1,8 @@
-<!--@extends('layouts.admin')
+@extends('layouts.admin')
 
 @section('content')
 
-	<h1>Role Details</h1><h2 style="margin-left: 800px; margin-bottom: 20px;"><a href="/admin">Admin</a> / <a href="/admin/role">Role Details</a> / Show</h2>
+	<h1>Show Role</h1><h2 style="margin-left: 800px; margin-bottom: 20px;"><a href="/admin">Admin</a> / <a href="/admin/role">Role Details</a> / Show</h2>
 	
 	<table class="table table-bordered table-hover table-responsive">
 	    <thead class="thead-inverse">
