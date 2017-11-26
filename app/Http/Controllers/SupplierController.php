@@ -30,7 +30,11 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        
+        $suppliers = Supplier::pluck('first_name', 'last_name','id')->all();
+        
+        return view('admin.supplier.create', compact('suppliers'));
+
     }
 
     /**
@@ -41,7 +45,12 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $supplier = new Supplier();
+        $supplier->create($request->all());
+
+        return redirect('admin/supplier');
+    
     }
 
     /**
