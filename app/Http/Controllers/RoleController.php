@@ -55,7 +55,7 @@ class RoleController extends Controller
 
         $rolesShow = $role->all();
 
-        return view('admin.role.show', compact('roleShow'));
+        return view('admin.role.show', compact('rolesShow'));
     }
 
     /**
