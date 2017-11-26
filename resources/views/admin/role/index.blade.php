@@ -40,7 +40,7 @@
                 <td>
                     <a href="" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
 
-                    <a class="btn btn-info" href=""><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
+                    <a class="btn btn-info" href="{{route('role.edit', $role->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
 
                     <a href="#" class="btn btn-danger"><i class="icon-trash"></i><span class="hidden-tablet"> Delete</span></a>
 
