@@ -44,8 +44,10 @@
                             <a class="btn btn-info" href="{{route('productcategory.edit', $productCategory->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
 
                             <input class="btn btn-danger right" type="submit" name="submit" value="Delete">
+                            {{ csrf_field() }} {{ method_field('DELETE') }}
                              <form action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST">
-                                {{ csrf_field() }} {{ method_field('DELETE') }}
+                                
+
                                 
                             </form>
 

@@ -43,8 +43,9 @@
                     <a class="btn btn-info" href="{{route('role.edit', $role->id)}}"><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
 
                     <input class="btn btn-danger right" type="submit" name="submit" value="Delete">
+                    {{ csrf_field() }} {{ method_field('DELETE') }}
                     <form action="{!! action('RoleController@destroy', $role->id) !!}" method="POST">
-                        {{ csrf_field() }} {{ method_field('DELETE') }}    
+                            
 
                 </td>
             </tr>
