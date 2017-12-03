@@ -29,6 +29,8 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/role', 'RoleController');
 
+    Route::resource('admin/product', 'ProductController');
+
 	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
 
 
