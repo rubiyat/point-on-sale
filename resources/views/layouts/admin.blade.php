@@ -1,494 +1,376 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
- 	
- 	<!-- start: Meta -->
- 	<meta charset="utf-8">
- 	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
- 	<meta name="description" content="Bootstrap Metro Dashboard">
- 	<meta name="author" content="Dennis Ji">
- 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
- 	<!-- end: Meta -->
- 	
- 	<!-- start: Mobile Specific -->
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<!-- end: Mobile Specific -->
- 	
- 	<!-- start: CSS -->
- 	<link id="bootstrap-style" href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
- 	<link href="{{asset('css/bootstrap-responsive.min.css')}}" rel="stylesheet">
- 	<link id="base-style" href="{{asset('css/style.css')}}" rel="stylesheet">
- 	<link id="base-style-responsive" href="{{asset('css/style-responsive.css')}}" rel="stylesheet">
- 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
- 	<!-- end: CSS -->
- 	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="description" content="Miminium Admin Template v.1">
+    <meta name="author" content="Isna Nur Azis">
+    <meta name="keyword" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miminium</title>
+ 
+    <!-- start: Css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 
- 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
- 	<!--[if lt IE 9]>
- 	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
- 		<link id="ie-style" href="css/ie.css" rel="stylesheet">
- 	<![endif]-->
- 	
- 	<!--[if IE 9]>
- 		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
- 	<![endif]-->
- 		
- 	<!-- start: Favicon -->
- 	<link rel="shortcut icon" href="img/favicon.ico">
- 	<!-- end: Favicon -->
- 	
- 		
- 		
- 		
- </head>
+      <!-- plugins -->
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins/font-awesome.min.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins/simple-line-icons.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins/animate.min.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins/fullcalendar.min.css') }}"/>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- end: Css -->
 
- <body>
- 		<!-- start: Header -->
- 	<div class="navbar">
- 		<div class="navbar-inner">
- 			<div class="container-fluid">
- 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
- 					<span class="icon-bar"></span>
- 					<span class="icon-bar"></span>
- 					<span class="icon-bar"></span>
- 				</a>
- 				<a class="brand" href="index.html"><span>JANUX</span></a>
- 								
- 				<!-- start: Header Menu -->
- 				<div class="nav-no-collapse header-nav">
- 					<ul class="nav pull-right">
- 						<li class="dropdown hidden-phone">
- 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
- 								<i class="icon-bell"></i>
- 								<span class="badge red">
- 								7 </span>
- 							</a>
- 							<ul class="dropdown-menu notifications">
- 								<li class="dropdown-menu-title">
-  									<span>You have 11 notifications</span>
- 									<a href="#refresh"><i class="icon-repeat"></i></a>
- 								</li>	
-                             	<li>
-                                     <a href="#">
- 										<span class="icon blue"><i class="icon-user"></i></span>
- 										<span class="message">New user registration</span>
- 										<span class="time">1 min</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon green"><i class="icon-comment-alt"></i></span>
- 										<span class="message">New comment</span>
- 										<span class="time">7 min</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon green"><i class="icon-comment-alt"></i></span>
- 										<span class="message">New comment</span>
- 										<span class="time">8 min</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon green"><i class="icon-comment-alt"></i></span>
- 										<span class="message">New comment</span>
- 										<span class="time">16 min</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon blue"><i class="icon-user"></i></span>
- 										<span class="message">New user registration</span>
- 										<span class="time">36 min</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon yellow"><i class="icon-shopping-cart"></i></span>
- 										<span class="message">2 items sold</span>
- 										<span class="time">1 hour</span> 
-                                     </a>
-                                 </li>
- 								<li class="warning">
-                                     <a href="#">
- 										<span class="icon red"><i class="icon-user"></i></span>
- 										<span class="message">User deleted account</span>
- 										<span class="time">2 hour</span> 
-                                     </a>
-                                 </li>
- 								<li class="warning">
-                                     <a href="#">
- 										<span class="icon red"><i class="icon-shopping-cart"></i></span>
- 										<span class="message">New comment</span>
- 										<span class="time">6 hour</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon green"><i class="icon-comment-alt"></i></span>
- 										<span class="message">New comment</span>
- 										<span class="time">yesterday</span> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="icon blue"><i class="icon-user"></i></span>
- 										<span class="message">New user registration</span>
- 										<span class="time">yesterday</span> 
-                                     </a>
-                                 </li>
-                                 <li class="dropdown-menu-sub-footer">
-                             		<a>View all notifications</a>
- 								</li>	
- 							</ul>
- 						</li>
- 						<!-- start: Notifications Dropdown -->
- 						<li class="dropdown hidden-phone">
- 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
- 								<i class="icon-calendar"></i>
- 								<span class="badge red">
- 								5 </span>
- 							</a>
- 							<ul class="dropdown-menu tasks">
- 								<li class="dropdown-menu-title">
-  									<span>You have 17 tasks in progress</span>
- 									<a href="#refresh"><i class="icon-repeat"></i></a>
- 								</li>
- 								<li>
-                                     <a href="#">
- 										<span class="header">
- 											<span class="title">iOS Development</span>
- 											<span class="percent"></span>
- 										</span>
-                                         <div class="taskProgress progressSlim red">80</div> 
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="header">
- 											<span class="title">Android Development</span>
- 											<span class="percent"></span>
- 										</span>
-                                         <div class="taskProgress progressSlim green">47</div> 
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="header">
- 											<span class="title">ARM Development</span>
- 											<span class="percent"></span>
- 										</span>
-                                         <div class="taskProgress progressSlim yellow">32</div> 
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="header">
- 											<span class="title">ARM Development</span>
- 											<span class="percent"></span>
- 										</span>
-                                         <div class="taskProgress progressSlim greenLight">63</div> 
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="header">
- 											<span class="title">ARM Development</span>
- 											<span class="percent"></span>
- 										</span>
-                                         <div class="taskProgress progressSlim orange">80</div> 
-                                     </a>
-                                 </li>
- 								<li>
-                             		<a class="dropdown-menu-sub-footer">View all tasks</a>
- 								</li>	
- 							</ul>
- 						</li>
- 						<!-- end: Notifications Dropdown -->
- 						<!-- start: Message Dropdown -->
- 						<li class="dropdown hidden-phone">
- 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
- 								<i class="icon-envelope"></i>
- 								<span class="badge red">
- 								4 </span>
- 							</a>
- 							<ul class="dropdown-menu messages">
- 								<li class="dropdown-menu-title">
-  									<span>You have 9 messages</span>
- 									<a href="#refresh"><i class="icon-repeat"></i></a>
- 								</li>	
-                             	<li>
-                                     <a href="#">
- 										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
- 										<span class="header">
- 											<span class="from">
- 										    	Dennis Ji
- 										     </span>
- 											<span class="time">
- 										    	6 min
- 										    </span>
- 										</span>
-                                         <span class="message">
-                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                         </span>  
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
- 										<span class="header">
- 											<span class="from">
- 										    	Dennis Ji
- 										     </span>
- 											<span class="time">
- 										    	56 min
- 										    </span>
- 										</span>
-                                         <span class="message">
-                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                         </span>  
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
- 										<span class="header">
- 											<span class="from">
- 										    	Dennis Ji
- 										     </span>
- 											<span class="time">
- 										    	3 hours
- 										    </span>
- 										</span>
-                                         <span class="message">
-                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                         </span>  
-                                     </a>
-                                 </li>
- 								<li>
-                                     <a href="#">
- 										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
- 										<span class="header">
- 											<span class="from">
- 										    	Dennis Ji
- 										     </span>
- 											<span class="time">
- 										    	yesterday
- 										    </span>
- 										</span>
-                                         <span class="message">
-                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                         </span>  
-                                     </a>
-                                 </li>
-                                 <li>
-                                     <a href="#">
- 										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
- 										<span class="header">
- 											<span class="from">
- 										    	Dennis Ji
- 										     </span>
- 											<span class="time">
- 										    	Jul 25, 2012
- 										    </span>
- 										</span>
-                                         <span class="message">
-                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                         </span>  
-                                     </a>
-                                 </li>
- 								<li>
-                             		<a class="dropdown-menu-sub-footer">View all messages</a>
- 								</li>	
- 							</ul>
- 						</li>
- 						
- 						<!-- start: User Dropdown -->
- 						<li class="dropdown">
- 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
- 								<i class="halflings-icon white user"></i> Dennis Ji
- 								<span class="caret"></span>
- 							</a>
- 							<ul class="dropdown-menu">
- 								<li class="dropdown-menu-title">
-  									<span>Account Settings</span>
- 								</li>
- 								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
- 								<li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
- 							</ul>
- 						</li>
- 						<!-- end: User Dropdown -->
- 					</ul>
- 				</div>
- 				<!-- end: Header Menu -->
- 				
- 			</div>
- 		</div>
- 	</div>
- 	<!-- start: Header -->
- 	
- 		<div class="container-fluid-full">
- 		<div class="row-fluid">
- 				
- 			<!-- start: Main Menu -->
- 			<div id="sidebar-left" class="span2">
- 				<div class="nav-collapse sidebar-nav">
- 					<ul class="nav nav-tabs nav-stacked main-menu">
- 						<li><a href="{{url('/admin')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-                        <li><a href="{{url('/admin/productcategory')}}"><i class="icon-align-justify"></i><span class="hidden-tablet"> Product Category</span></a></li>
+    <link rel="shortcut icon" href="{{ asset('img/logomi.png') }}">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+ <body id="mimin" class="dashboard">
+      <!-- start: Header -->
+        <nav class="navbar navbar-default header navbar-fixed-top">
+          <div class="col-md-12 nav-wrapper">
+            <div class="navbar-header" style="width:100%;">
+              <div class="opener-left-menu is-open">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+              </div>
+                <a href="index.html" class="navbar-brand"> 
+                 <b>MIMIN</b>
+                </a>
+
+              <ul class="nav navbar-nav search-nav">
+                <li>
+                   <div class="search">
+                    <span class="fa fa-search icon-search" style="font-size:23px;"></span>
+                    <div class="form-group form-animate-text">
+                      <input type="text" class="form-text" required>
+                      <span class="bar"></span>
+                      <label class="label-search">Type anywhere to <b>Search</b> </label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right user-nav">
+                <li class="user-name"><span>Akihiko Avaron</span></li>
+                  <li class="dropdown avatar-dropdown">
+                   <img src="{{ asset('img/avatar.jpg') }}" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   <ul class="dropdown-menu user-dropdown">
+                     <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                     <li><a href="#"><span class="fa fa-calendar"></span> My Calendar</a></li>
+                     <li role="separator" class="divider"></li>
+                     <li class="more">
+                      <ul>
+                        <li><a href=""><span class="fa fa-cogs"></span></a></li>
+                        <li><a href=""><span class="fa fa-lock"></span></a></li>
+                        <li><a href=""><span class="fa fa-power-off "></span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      <!-- end: Header -->
+
+      <div class="container-fluid mimin-wrapper">
+  
+          <!-- start:Left Menu -->
+            <div id="left-menu">
+              <div class="sub-left-menu scroll">
+                <ul class="nav nav-list">
+                    <li><div class="left-bg"></div></li>
+                    <li class="time">
+                      <h1 class="animated fadeInLeft">21:00</h1>
+                      <p class="animated fadeInRight">Sat,October 1st 2029</p>
+                    </li>
+                    <li class="active ripple">
+                      <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Dashboard 
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                          <li><a href="dashboard-v1.html">Dashboard v.1</a></li>
+                          <li><a href="dashboard-v2.html">Dashboard v.2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="{{url('/admin/productcategory')}}" target="_blank"> Product Category</a></li>
                         <li><a href="{{url('/admin/supplier')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Suppliers</span></a></li>
                         <li><a href="{{url('/admin/role')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Role</span></a></li>
                         <li><a href="{{url('/admin/products')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Products</span></a></li>
- 						<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>
- 						<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>
- 						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
- 						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
- 						<li>
- 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
- 							<ul>
- 								<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
- 								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
- 								<li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
- 							</ul>	
- 						</li>
- 						<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
- 						<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
- 						<li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
- 						<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
- 						<li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
- 						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
- 						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
- 						<li><a href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
- 						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
- 					</ul>
- 				</div>
- 			</div>
- 			<!-- end: Main Menu -->
- 			
- 			<noscript>
- 				<div class="alert alert-block span10">
- 					<h4 class="alert-heading">Warning!</h4>
- 					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
- 				</div>
- 			</noscript>
- 			
- 			<!-- start: Content -->
- 			<div id="content" class="span10">
- 			
- 			
- 			<ul class="breadcrumb">
- 				<li>
- 					<i class="icon-home"></i>
- 					<a href="index.html">Home</a> 
- 					<i class="icon-angle-right"></i>
- 				</li>
- 				<li><a href="#">Dashboard</a></li>
- 			</ul>
-
-            <div class="row-fluid">
-                @yield('content')
-            </div>	
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa-diamond fa"></span> Layout
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="topnav.html">Top Navigation</a></li>
+                        <li><a target="_blank" href="boxed.html">Boxed</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa-area-chart fa"></span> Charts
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="chartjs.html">ChartJs</a></li>
+                        <li><a href="morris.html">Morris</a></li>
+                        <li><a href="flot.html">Flot</a></li>
+                        <li><a href="sparkline.html">SparkLine</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a class="tree-toggle nav-header">
+                    <span class="fa fa-pencil-square"></span> Ui Elements  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="color.html">Color</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="panels.html">Panels & Tabs</a></li>
+                        <li><a href="notifications.html">Notifications & Tooltip</a></li>
+                        <li><a href="badges.html">Badges & Label</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="sliders.html">Sliders</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="modal.html">Modals</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-check-square-o"></span> Forms  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="formelement.html">Form Element</a></li>
+                        <li><a href="#">Wizard</a></li>
+                        <li><a href="#">File Upload</a></li>
+                        <li><a href="#">Text Editor</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-table"></span> Tables  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="datatables.html">Data Tables</a></li>
+                        <li><a href="handsontable.html">handsontable</a></li>
+                        <li><a href="tablestatic.html">Static</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a href="calendar.html"><span class="fa fa-calendar-o"></span>Calendar</a></li>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-envelope-o"></span> Mail <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="mail-box.html">Inbox</a></li>
+                        <li><a href="compose-mail.html">Compose Mail</a></li>
+                        <li><a href="view-mail.html">View Mail</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-file-code-o"></span> Pages  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="forgotpass.html">Forgot Password</a></li>
+                        <li><a href="login.html">SignIn</a></li>
+                        <li><a href="reg.html">SignUp</a></li>
+                        <li><a href="article-v1.html">Article v1</a></li>
+                        <li><a href="search-v1.html">Search Result v1</a></li>
+                        <li><a href="productgrid.html">Product Grid</a></li>
+                        <li><a href="profile-v1.html">Profile v1</a></li>
+                        <li><a href="invoice-v1.html">Invoice v1</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa "></span> MultiLevel  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="view-mail.html">Level 1</a></li>
+                        <li><a href="view-mail.html">Level 1</a></li>
+                        <li class="ripple">
+                          <a class="sub-tree-toggle nav-header">
+                            <span class="fa fa-envelope-o"></span> Level 1
+                            <span class="fa-angle-right fa right-arrow text-right"></span>
+                          </a>
+                          <ul class="nav nav-list sub-tree">
+                            <li><a href="mail-box.html">Level 2</a></li>
+                            <li><a href="compose-mail.html">Level 2</a></li>
+                            <li><a href="view-mail.html">Level 2</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="credits.html">Credits</a></li>
+                  </ul>
+                </div>
+            </div>
+          <!-- end: Left Menu -->
 
         
+          <!-- start: content -->
+            <div id="content">
+                
+             @yield('content')
+            </div>
+          <!-- end: content -->
 
- 	</div><!--/.fluid-container-->
- 	
- 			<!-- end: Content -->
- 		</div><!--/#content.span10-->
- 		</div><!--/fluid-row-->
- 		
- 	<div class="modal hide fade" id="myModal">
- 		<div class="modal-header">
- 			<button type="button" class="close" data-dismiss="modal">×</button>
- 			<h3>Settings</h3>
- 		</div>
- 		<div class="modal-body">
- 			<p>Here settings can be configured...</p>
- 		</div>
- 		<div class="modal-footer">
- 			<a href="#" class="btn" data-dismiss="modal">Close</a>
- 			<a href="#" class="btn btn-primary">Save changes</a>
- 		</div>
- 	</div>
- 	
- 	<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
- 		<div class="modal-content">
- 			<ul class="list-inline item-details">
- 				<li><a href="http://themifycloud.com">Admin templates</a></li>
- 				<li><a href="http://themescloud.org">Bootstrap themes</a></li>
- 			</ul>
- 		</div>
- 	</div>
- 	
- 	<div class="clearfix"></div>
- 	
- 	<footer>
+    
+        
+          
+      </div>
 
- 		<p>
- 			<span style="text-align:left;float:left">&copy; 2013 <a href="http://themifycloud.com/downloads/janux-free-responsive-admin-dashboard-template/" alt="Bootstrap_Metro_Dashboard">JANUX Responsive Dashboard</a></span>
- 			
- 		</p>
+      <!-- start: Mobile -->
+      <div id="mimin-mobile" class="reverse">
+        <div class="mimin-mobile-menu-list">
+            <div class="col-md-12 sub-mimin-mobile-menu-list animated fadeInLeft">
+                <ul class="nav nav-list">
+                    <li class="active ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa-home fa"></span>Dashboard 
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                          <li><a href="dashboard-v1.html">Dashboard v.1</a></li>
+                          <li><a href="dashboard-v2.html">Dashboard v.2</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa-diamond fa"></span>Layout
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="topnav.html">Top Navigation</a></li>
+                        <li><a href="boxed.html">Boxed</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa-area-chart fa"></span>Charts
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="chartjs.html">ChartJs</a></li>
+                        <li><a href="morris.html">Morris</a></li>
+                        <li><a href="flot.html">Flot</a></li>
+                        <li><a href="sparkline.html">SparkLine</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa fa-pencil-square"></span>Ui Elements
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="color.html">Color</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="panels.html">Panels & Tabs</a></li>
+                        <li><a href="notifications.html">Notifications & Tooltip</a></li>
+                        <li><a href="badges.html">Badges & Label</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="sliders.html">Sliders</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="modal.html">Modals</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                       <span class="fa fa-check-square-o"></span>Forms
+                       <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="formelement.html">Form Element</a></li>
+                        <li><a href="#">Wizard</a></li>
+                        <li><a href="#">File Upload</a></li>
+                        <li><a href="#">Text Editor</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa fa-table"></span>Tables
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="datatables.html">Data Tables</a></li>
+                        <li><a href="handsontable.html">handsontable</a></li>
+                        <li><a href="tablestatic.html">Static</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a href="calendar.html">
+                         <span class="fa fa-calendar-o"></span>Calendar
+                      </a>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa fa-envelope-o"></span>Mail
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="mail-box.html">Inbox</a></li>
+                        <li><a href="compose-mail.html">Compose Mail</a></li>
+                        <li><a href="view-mail.html">View Mail</a></li>
+                      </ul>
+                    </li>
+                    <li class="ripple">
+                      <a class="tree-toggle nav-header">
+                        <span class="fa fa-file-code-o"></span>Pages
+                        <span class="fa-angle-right fa right-arrow text-right"></span>
+                      </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="forgotpass.html">Forgot Password</a></li>
+                        <li><a href="login.html">SignIn</a></li>
+                        <li><a href="reg.html">SignUp</a></li>
+                        <li><a href="article-v1.html">Article v1</a></li>
+                        <li><a href="search-v1.html">Search Result v1</a></li>
+                        <li><a href="productgrid.html">Product Grid</a></li>
+                        <li><a href="profile-v1.html">Profile v1</a></li>
+                        <li><a href="invoice-v1.html">Invoice v1</a></li>
+                      </ul>
+                    </li>
+                     <li class="ripple"><a class="tree-toggle nav-header"><span class="fa "></span> MultiLevel  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="view-mail.html">Level 1</a></li>
+                        <li><a href="view-mail.html">Level 1</a></li>
+                        <li class="ripple">
+                          <a class="sub-tree-toggle nav-header">
+                            <span class="fa fa-envelope-o"></span> Level 1
+                            <span class="fa-angle-right fa right-arrow text-right"></span>
+                          </a>
+                          <ul class="nav nav-list sub-tree">
+                            <li><a href="mail-box.html">Level 2</a></li>
+                            <li><a href="compose-mail.html">Level 2</a></li>
+                            <li><a href="view-mail.html">Level 2</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="credits.html">Credits</a></li>
+                  </ul>
+            </div>
+        </div>       
+      </div>
+      <button id="mimin-mobile-menu-opener" class="animated rubberBand btn btn-circle btn-danger">
+        <span class="fa fa-bars"></span>
+      </button>
+       <!-- end: Mobile -->
 
- 	</footer>
- 	
- 	<!-- start: JavaScript-->
+    <!-- start: Javascript -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.ui.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+   
+    
+    <!-- plugins -->
+    <script src="{{ asset('js/plugins/moment.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/fullcalendar.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('js/plugins/jquery.vmap.min.js') }}"></script>
+    <script src="{{ asset('js/plugins/maps/jquery.vmap.world.js') }}"></script>
+    <script src="{{ asset('js/plugins/jquery.vmap.sampledata.js') }}"></script>
+    <script src="{{ asset('js/plugins/chart.min.js') }}"></script>
 
- 		<script src="{{asset('js/jquery-1.9.1.min.js')}}"></script>
- 	<script src="{{asset('js/jquery-migrate-1.0.0.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery-ui-1.10.0.custom.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.ui.touch-punch.js')}}"></script>
- 	
- 		<script src="{{asset('js/modernizr.js')}}"></script>
- 	
- 		<script src="{{asset('js/bootstrap.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.cookie.js')}}"></script>
- 	
- 		<script src="{{asset('js/fullcalendar.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 
- 		<script src="{{asset('js/excanvas.js')}}"></script>
- 	<script src="{{asset('js/jquery.flot.js')}}"></script>
- 	<script src="{{asset('js/jquery.flot.pie.js')}}"></script>
- 	<script src="{{asset('js/jquery.flot.stack.js')}}"></script>
- 	<script src="{{asset('js/jquery.flot.resize.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.chosen.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.uniform.min.js')}}"></script>
- 		
- 		<script src="{{asset('js/jquery.cleditor.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.noty.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.elfinder.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.raty.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.iphone.toggle.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.uploadify-3.1.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.gritter.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.imagesloaded.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.masonry.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.knob.modified.js')}}"></script>
- 	
- 		<script src="{{asset('js/jquery.sparkline.min.js')}}"></script>
- 	
- 		<script src="{{asset('js/counter.js')}}"></script>
- 	
- 		<script src="{{asset('js/retina.js')}}"></script>
-
- 		<script src="{{asset('js/custom.js')}}"></script>
- 	<!-- end: JavaScript-->
- 	
- </body>
- </html>
+    <!-- custom -->
+     <script src="{{ asset('js/main.js') }}"></script>
+    
+  </body>
+</html>
