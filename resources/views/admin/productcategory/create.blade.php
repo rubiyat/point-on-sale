@@ -2,10 +2,8 @@
 
 @section('content')
 
-					<h3>Add New Product Category</h3>
-					<hr>
-
-<div class="col-md-12">
+<div class="col-sm-12">
+  <h3>Add New Product Category</h3>
   <form action="{{route('productcategory.store')}}" method="POST">
     {{ csrf_field() }}
 
@@ -16,12 +14,12 @@
    
       </div>
       <div class="form-group">
-        <label for="Description"><h5>Description</h5></label>
-        <textarea class="form-control" id="Description" name="description"></textarea>
+        <label for="Description">Description</label>
+        <textarea class="form-control" rows="5" id="Description" name="description"></textarea>
       </div>
     <div class="form-group">
-        <label for="Status"><h5>Status</h5></label>
-      <select class="form-controls" name="status">
+      <label for="Status">Status</label>
+      <select class="form-control" name="status">
           <option value="1">Approve</option>
           <option value="2">Unapprove</option>
       </select>
