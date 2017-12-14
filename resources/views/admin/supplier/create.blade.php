@@ -3,11 +3,11 @@
 
 @section('content')
 
+<div class="col-sm-12">
+	
 
-	<h1>Add New Supplier</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / <a href="">Suppliers</a> / New</h2>
-
-	<hr style="border-top: solid #DCDCDC 1px;">
-
+	<h1>Add New Supplier</h1>
+	
 	<form method="post" action="{{route('supplier.store')}}">
 
 		{{ csrf_field() }}
@@ -42,15 +42,15 @@
 			<input type="text" name="phone" class="form-control">
 		</div>
 
-		<div class="form-group col-sm-6">
+
 
 			<input type="submit" name="save_supplier" class="btn btn-primary" value="Save">
 
 			<a href="{{route('supplier.index')}}" class="btn btn-danger"><i class="icon-trash"></i><span class="hidden-tablet"> Cancel</span></a>
 
-		</div>
+	
 
 	</form>
-
+</div>
 
 @endsection
