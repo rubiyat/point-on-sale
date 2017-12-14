@@ -2,16 +2,13 @@
 
 @section('content')
 
-   
-
-	<h1>Product Details</h1><h2 style="margin-left: 850px; margin-bottom: 20px;"><a href="/admin">Admin</a> / Product Details</h2>
-
-	<hr style="border-top: solid #DCDCDC 1px;">
-
+   <div class="col-sm-12">
+ 
+	<h1>Product Details</h1>
 
     <div class="input-prepend">
-        <a href="{{route('products.create')}}" class="btn btn-primary" style="margin-bottom: 20px;">Add New Product</a>
-    </div>
+        <a href="{{route('products.create')}}" ><button type="button" class="btn btn-primary">Add New Product</button></a>
+    </div><br>
 
         <table class="table table-bordered table-hover table-responsive">
             <thead>
@@ -41,11 +38,11 @@
 
 
                         <td>
-                            <a href="" class="btn btn-primary"><i class="icon-eye-open" ></i><span class="hidden-tablet"> Show</span></a>
+                            <a href=""><button type="button" class="btn btn-primary">Show</button></a>
 
-                            <a class="btn btn-info" href=""><i class="icon-edit"></i><span class="hidden-tablet"> Edit</span></a>
+                            <a href=""><button type="button" class="btn btn-info">Edit</button></a>
 
-                            <input class="btn btn-danger right" type="submit" name="submit" value="Delete">
+                            <input class="btn btn-danger" type="submit" name="submit" value="Delete">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
                              <form action="" method="">
                                 
@@ -61,5 +58,9 @@
 
         </tbody>
     </table>
+
+
+   </div>
+
 
 @stop
