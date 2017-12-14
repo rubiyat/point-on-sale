@@ -2,7 +2,8 @@
 
 @section('content')
 
-	<h1>Show Role</h1><h2 style="margin-left: 800px; margin-bottom: 20px;"><a href="/admin">Admin</a> / <a href="/admin/role">Role Details</a> / Show</h2>
+<div class="col-sm-12">
+	<h1>Show Role</h1>
 	
 	<table class="table table-bordered table-hover table-responsive">
 	    <thead class="thead-inverse">
@@ -31,8 +32,7 @@
 	    </tbody>
 	</table>
 
-
-	<div class="col-md-4 text-center">
 		<input type="button" name="buttonBack" class="btn btn-warning" onclick="window.location='/admin/role';" value="&larr;Back">
+</div>
 
 @stop

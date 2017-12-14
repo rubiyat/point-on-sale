@@ -2,10 +2,11 @@
 
 @section('content')
 
-					<h3>Add New Role</h3>
-					<hr>
+				
 
 <div class="col-md-12">
+  <h1>Add New Role</h1>
+
   <form action="{{route('role.store')}}" method="POST">
     {{ csrf_field() }}
 
