@@ -78,7 +78,8 @@ class SupplierController extends Controller
      */
     public function edit($id)
     {
-        //
+        $supplier = Supplier::findOrFail($id);
+        return view('admin.supplier.edit',compact(['supplier']));
     }
 
     /**
@@ -90,7 +91,9 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $supplier = Supplier::find($id);
+        $supplier->update($request->all());
+        return redirect('admin/supplier');
     }
 
     /**
