@@ -12,34 +12,26 @@
 		      <tr>
 		        <th><b>Category Name:</b></th>
 
-		        @if($categoriesShow)
-		        @foreach($categoriesShow as $categoryShow)
-		        	<td>{{$categoryShow->name}}</td>
-		        @endforeach
-		        @endif	
+		    
+		        	<td>{{$productCategory->name}}</td>
+		      
 		      </tr>
 		      <tr>
 		        <th><b>Description:</b></th>
 
-		        @if($categoriesShow)
-		        @foreach($categoriesShow as $categoryShow)
-		        	<td>{{$categoryShow->description}}</td>
-		        @endforeach
-		        @endif	
+		    
+		        	<td>{{$productCategory->description}}</td>
+		  
 		      </tr>
 		      <tr>
 		        <th><b>Status:</b></th>
 
-		        @if($categoriesShow)
-		        @foreach($categoriesShow as $categoryShow)
-		        	<td>{{$categoryShow->status}}</td>
-		        @endforeach
-		        @endif
+		        	<td>{{$productCategory->status}}</td>
+	
 		      </tr>
 		    </tbody>
 		</table>
-			<input type="button" name="buttonBack" class="btn btn-warning" onclick="window.location='/admin/productcategory';" value="&larr;Back">
-
+		<a href="{{ route('productcategory.index') }}"><button type="button" class="btn btn-info">Back</button></a>
 </div>
 
 @stop

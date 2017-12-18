@@ -56,9 +56,7 @@ class ProductCategoryController extends Controller
         
         $productCategory = ProductCategory::findOrFail($id);
 
-        $categoriesShow = $productCategory->all();
-
-        return view('admin.productcategory.show', compact('categoriesShow'));
+        return view('admin.productcategory.show', compact('productCategory'));
 
     }
 
