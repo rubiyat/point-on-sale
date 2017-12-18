@@ -64,9 +64,8 @@ class SupplierController extends Controller
         
         $supplier = Supplier::findOrFail($id);
 
-        $suppliersShow = $supplier->all();
 
-        return view('admin.supplier.show', compact('suppliersShow'));
+        return view('admin.supplier.show', compact('supplier'));
 
     }
 
