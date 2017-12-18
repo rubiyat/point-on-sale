@@ -31,6 +31,8 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/products', 'ProductsController');
 
+    Route::resource('admin/customer', 'CustomerController');
+
 	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
 
 
