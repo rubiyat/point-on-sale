@@ -6,7 +6,7 @@
         <h1>Supplier's Details</h1>
         
     <div class="input-prepend">
-        <a href="#"><button type="button" class="btn btn-primary">Add Supplier</button></a>
+        <a href="{{ route('supplier.create') }}"><button type="button" class="btn btn-primary">Add Supplier</button></a>
     </div><br>
 
 
