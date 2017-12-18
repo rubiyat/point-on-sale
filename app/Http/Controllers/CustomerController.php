@@ -25,7 +25,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.customer.create');
     }
 
     /**
@@ -36,7 +36,10 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $customer = new Customer;
+        $customer->create($request->all());
+
+        return redirect('admin/customer');
     }
 
     /**
