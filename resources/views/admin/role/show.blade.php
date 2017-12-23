@@ -11,28 +11,27 @@
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <th><b>Id:</b></th>
-
-	        @if($rolesShow)
-	        @foreach($rolesShow as $roleShow)
-	        	<td>{{$roleShow->id}}</td>
-	        @endforeach
-	        @endif	
+	        <th><b>Role Id:</b></th>
+		       
+		      
+	        		<td>{{$role->id}}</td>
+	        
 	      </tr>
-	      <tr>
-	        <th><b>Name:</b></th>
 
-	        @if($rolesShow)
-	        @foreach($rolesShow as $roleShow)
-	        	<td>{{$roleShow->name}}</td>
-	        @endforeach
-	        @endif	
+	      <tr>
+	        <th><b>Role Name:</b></th>
+	       
+		       
+	        		<td>{{$role->name}}</td>
+	      
 	      </tr>
 	      
 	    </tbody>
 	</table>
 
-		<input type="button" name="buttonBack" class="btn btn-warning" onclick="window.location='/admin/role';" value="&larr;Back">
+		<!--Start Buttton -->
+
+		<a href="{{ route('productcategory.index') }}"><button type="button" class="btn btn-info">Back</button></a>
 </div>
 
 @stop

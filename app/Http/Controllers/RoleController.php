@@ -51,11 +51,11 @@ class RoleController extends Controller
      */
     public function show($id)
     {
+        
         $role = Role::findOrFail($id);
-
-        $rolesShow = $role->all();
-
-        return view('admin.role.show', compact('rolesShow'));
+       
+        return view('admin.role.show',compact(['role']));
+        
     }
 
     /**
