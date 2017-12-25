@@ -21,4 +21,8 @@ class Employee extends Model
     	'role_id'
 
     ];
+
+      public function role() {
+        return $this->belongsTo('App\Role');
+    }
 }

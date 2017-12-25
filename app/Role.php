@@ -12,4 +12,8 @@ class Role extends Model
 		'name'
 
 	];
+
+	public function employees() {
+		return $this->hasMany('App\Employee');
+	}
 }
