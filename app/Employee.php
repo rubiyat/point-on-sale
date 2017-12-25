@@ -17,10 +17,17 @@ class Employee extends Model
     	'email',
     	'image',
     	'date_of_birth',
-    	'hire_date',
+    	'join_date',
     	'role_id'
 
     ];
+
+    protected $uploads = '/images/';
+
+
+    public function getFileAttribute($photo){
+        return $this->uploads . $photo;
+    }
 
       public function role() {
         return $this->belongsTo('App\Role');

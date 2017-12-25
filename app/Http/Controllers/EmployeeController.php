@@ -26,7 +26,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::get(['id', 'name']);
+        return view('admin.employee.create', compact('roles'));
     }
 
     /**
@@ -37,7 +38,17 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $employee = new Employee;
+
+        $file = $request->file('image');
+
+        $name = time() . $file->getClientOriginalName();
+
+        $file->move('images',$name);
+
+
+        $employee->create($request->all());
+        return redirect('admin/employee');
     }
 
     /**
