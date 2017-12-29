@@ -35,13 +35,12 @@
                                     <a href="{{route('employee.show', $employee->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
 
                                     <a href="{{route('employee.edit', $employee->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
-
-                                    
-                                   
-                                    
                                      <form action="{!! action('EmployeeController@destroy', $employee->id) !!}" method="POST">
-                                        {{ csrf_field() }} {{ method_field('DELETE') }}
-                                        <button type="button" class="btn btn-danger">Delete</button>
+                                       {{csrf_field()}}
+
+                                         {{method_field('DELETE')}}
+
+                                        <input class="btn btn-danger" type="submit" name="submit" value="Delete">
                                         
                                     </form>
 
