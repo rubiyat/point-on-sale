@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ProductCategory;
 use App\Products;
+use App\Photo;
 
 class ProductsController extends Controller
 {
@@ -25,7 +27,10 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        // return view('admin.products.create');
+        
+        $productCategories = ProductCategory::all();
+        return view('admin.products.create', compact('productCategories'));
     }
 
     /**
@@ -36,7 +41,15 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $products = new Products;
+
+        $file = $request->file('image');
+        $name = time() . $file->getClientOriginalName();
+        $file->move('images',$name);
+
+        $products->create($request->all());
+        return redirect ('admin/products');
+
     }
 
     /**

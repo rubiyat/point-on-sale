@@ -16,4 +16,11 @@ class Products extends Model
     	'product_category_id',
     	'status'
     ];
+
+    protected $uploads = '/images/';
+
+    public function getFileAttribute($photo){
+        return $this->uploads. $photo;
+    }
+
 }

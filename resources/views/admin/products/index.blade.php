@@ -18,7 +18,7 @@
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Vate Rate</th>
-                <th>Action</th>
+                <th>Action</th>              
             </tr>
             </thead>
             <tbody>
@@ -35,7 +35,6 @@
                         <td>{{$product->description}}</td>
                         <td>{{$product->price}}</td>
                         <td>{{$product->vate_rate}}</td>
-
 
                         <td>
                             <a href=""><button type="button" class="btn btn-primary">Show</button></a>
