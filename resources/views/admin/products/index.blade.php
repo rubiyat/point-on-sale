@@ -37,7 +37,7 @@
                         <td>{{$product->vate_rate}}</td>
 
                         <td>
-                            <a href=""><button type="button" class="btn btn-primary">Show</button></a>
+                            <a href="{{route('products.show', $product->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
 
                             <a href="{{route('products.edit', $product->id)}}"><button type="button" class="btn btn-info">Edit</button></a>
 
