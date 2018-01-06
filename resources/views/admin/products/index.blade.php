@@ -41,9 +41,14 @@
 
                             <a href="{{route('products.edit', $product->id)}}"><button type="button" class="btn btn-info">Edit</button></a>
 
-                            <input class="btn btn-danger" type="submit" name="submit" value="Delete">
-                            {{ csrf_field() }} {{ method_field('DELETE') }}
-                             <form action="" method="">
+                            <form action="{!! action('ProductsController@destroy', $product->id) !!}" method="POST">
+
+                                {{csrf_field()}}
+
+                                {{method_field('DELETE')}}
+
+                                <input class="btn btn-danger" type="submit" name="submit" value="Delete">
+
                                 
 
                                 
