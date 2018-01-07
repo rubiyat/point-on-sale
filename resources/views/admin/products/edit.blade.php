@@ -12,7 +12,7 @@
       
       <div class="form-group">
         <label for="Status"><h5>Product Category Name</h5></label><br>
-        <select class="form-controls" name="product_category_id">      
+        <select class="form-controls" name="product_category_id" style="width: 200px;">      
            
            <option value="{{$products->product_category_id}}">{{$products->productCategory->name}}</option> 
            @foreach($productCategories as $productCategory)
@@ -43,7 +43,7 @@
       </div>
     <div class="form-group">
         <label for="Status"><h5>Status</h5></label><br>
-      <select class="form-controls" name="status">
+      <select class="form-controls" name="status" style="width: 200px;">
           <option value="1">Approve</option>
           <option value="2">Unapprove</option>
       </select>

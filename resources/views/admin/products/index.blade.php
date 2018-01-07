@@ -36,10 +36,12 @@
                         <td>{{$product->price}}</td>
                         <td>{{$product->vate_rate}}</td>
 
-                        <td>
+                        <td >
                             <a href="{{route('products.show', $product->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
 
                             <a href="{{route('products.edit', $product->id)}}"><button type="button" class="btn btn-info">Edit</button></a>
+
+
 
                             <form action="{!! action('ProductsController@destroy', $product->id) !!}" method="POST">
 
@@ -47,13 +49,10 @@
 
                                 {{method_field('DELETE')}}
 
-                                <input class="btn btn-danger" type="submit" name="submit" value="Delete">
-
-                                
+                                <input class="btn btn-danger" type="submit" name="submit" value="Delete">     
 
                                 
                             </form>
-
                         </td>
 
                     </tr>

@@ -12,12 +12,12 @@
       
       <div class="form-group">
         <label for="Status"><h5>Product Category Name</h5></label><br>
-      <select class="form-controls" name="product_category_id">      
+        <select class="form-controls" name="product_category_id">      
            <option value="">Choose Options</option> 
            @foreach($productCategories as $productCategory)
            <option value="{{$productCategory->id}}">{{$productCategory->name}}</option> 
            @endforeach         
-      </select>
+        </select>
       </div>
 
       <div class="form-group">
