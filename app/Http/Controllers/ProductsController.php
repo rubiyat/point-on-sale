@@ -60,7 +60,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $products = Products::findOrFail($id);
+        return view('admin.products.show', compact(['products']));
     }
 
     /**
@@ -71,7 +72,9 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $products = Products::findorfail($id);
+        $productCategories = ProductCategory::get(['id', 'name']);
+        return view('admin.products.edit', compact('products','productCategories'));
     }
 
     /**
@@ -83,7 +86,9 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $products = Products::find($id);
+        $products->update($request->all());
+        return redirect('admin/products');
     }
 
     /**
@@ -94,6 +99,10 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $products = Products::findOrFail($id);
+
+        $products->delete();
+
+        return redirect('admin/products');
     }
 }

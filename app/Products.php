@@ -23,4 +23,9 @@ class Products extends Model
         return $this->uploads. $photo;
     }
 
+    public function productCategory()
+    {
+        return $this->belongsTo('App\ProductCategory');
+    }
+
 }
