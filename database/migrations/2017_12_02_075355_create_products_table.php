@@ -20,8 +20,7 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->string('image');
             $table->float('vate_rate');
-            $table->integer('product_category_id')->unsigned();
-            $table->foreign('product_category_id')->references('id')->on('product_categories');
+        
             $table->char('status');
             $table->timestamps();
         });
