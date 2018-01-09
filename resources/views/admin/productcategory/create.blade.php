@@ -26,7 +26,7 @@
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
-        <button type="submit" class="btn btn-default">Cancel</button>
+        <button type="button" onclick="window.location.href='{{route('productcategory.index')}}'" class="btn btn-default">Cancel</button>
       </div>
 
 <form/>
