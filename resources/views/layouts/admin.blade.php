@@ -98,7 +98,7 @@
                           <li><a href="dashboard-v2.html">Dashboard v.2</a></li>
                       </ul>
                     </li>
-                    <li><a href="{{url('/admin/productcategory')}}" target="_blank"> Product Category</a></li>
+                    <li><a href="{{url('/admin/productcategory')}}" target="_blank"><span class="fa fa-cubes"></span> Product Category</a></li>
                         <li><a href="{{url('/admin/supplier')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Suppliers</span></a></li>
                         <li><a href="{{url('/admin/role')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Role</span></a></li>
                         <li><a href="{{url('/admin/products')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Products</span></a></li>

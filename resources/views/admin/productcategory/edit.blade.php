@@ -26,9 +26,9 @@
                 <label for="category_status">Status</label>
                 <select name="status" value="{{$productCategory->status}}" class="form-control">
 
-                    <option value="1">Approved</option>
+                    <option value="0">Active</option>
 
-                    <option value="2">Unapproved</option>
+                    <option value="1">Inactive</option>
 
                 </select>
 
@@ -37,7 +37,7 @@
             <div class="form-group">
                     
                 <input type="submit" name="submit" class="btn btn-primary" value="Submit">
-                <a href="{{route('productcategory.index')}}" class="btn btn-default">Cancel</a>
+                <a href="{{route('productcategory.index')}}"><button type="button" class="btn btn-default">Cancel</button></a>
 
             </div>
 

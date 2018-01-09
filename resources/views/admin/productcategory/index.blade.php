@@ -7,7 +7,8 @@
              <h1>Product Category</h1><br>
                 
                 <div class="input-prepend gap">
-                    <a href="{{route('productcategory.create')}}"><button type="button" class="btn btn-primary">Add Product Category</button></a>
+                    <button class="btn btn-primary" onclick="window.location.href='{{route('productcategory.create')}}'"><i class="glyphicon glyphicon-plus"></i> Add New Product Category</button>
+                    <button type="button" onclick="window.print();" class="btn btn-info" style="margin-left: 5px;"><i class="glyphicon glyphicon-print"> </i> Print</button>
                 </div><br><br>
 
                     <table class="table table-bordered table-hover table-responsive">
@@ -15,7 +16,6 @@
                         <tr>
                             <th>SL</th>
                             <th>Name</th>
-                            <th>Description</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -29,27 +29,27 @@
 
                                 <tr>
 
-                                    <td>{{$productCategory->id}}</td>
+                                    <td>{{$number++}}</td>
                                     <td>{{$productCategory->name}}</td>
-                                    <td>{{$productCategory->description}}</td>
-                                    <td>{{$productCategory->status}}</td>
+                                    <td>
+                                        
+                                        {!! ($productCategory->status == 0) ? 
+                                            '<span class="label label-success">Active</span>' :
+                                            '<span class="label label-danger">Inactive</span>'
+                                         !!}
+                                    </td>
 
 
                                     <td>
-                                        <a href="{{route('productcategory.show', $productCategory->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
+                                        <button class="btn btn-info" onclick="window.location.href='{{route('productcategory.show', $productCategory->id)}}'"><i class="glyphicon glyphicon-eye-open" title="Show"></i></button>
 
-                                        <a href="{{route('productcategory.edit', $productCategory->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
-
+                                        <button class="btn btn-warning" onclick="window.location.href='{{route('productcategory.edit', $productCategory->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i></button>
                                         
                                        <!--  <input type="submit" name="submit" value="Delete"> -->
-                                        <button type="button" class="btn btn-danger">Delete</button>
+                                        <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
                                         {{ csrf_field() }} {{ method_field('DELETE') }}
                                          <form action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST">
-
-                                        
-                                            
-
-                                            
+                                   
                                         </form>
 
                                     </td>
@@ -61,9 +61,5 @@
                     </tbody>
                 </table>
         </div>
-
-
-        
-	
 
 @stop

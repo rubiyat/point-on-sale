@@ -10,7 +10,7 @@
       <div class="form-group">
         <label for="Name"><h5>Category Name</h5></label>
        
-          <input type="text" class="form-control col-md-12" id="Name" name="name">
+          <input type="text" class="form-control" id="Name" name="name">
    
       </div>
       <div class="form-group">
@@ -20,8 +20,8 @@
     <div class="form-group">
       <label for="Status">Status</label>
       <select class="form-control" name="status">
-          <option value="1">Approve</option>
-          <option value="2">Unapprove</option>
+          <option value="0">Active</option>
+          <option value="1">Inactive</option>
       </select>
       </div>
       <div class="form-group">

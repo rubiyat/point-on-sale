@@ -16,9 +16,10 @@ class ProductCategoryController extends Controller
     public function index()
     {
 
-        $productCategories = ProductCategory::all();
+        $productCategories = ProductCategory::orderBy('id', 'DESC')->get(['id','name','description','status']);
+        $number = 1;
 
-        return view('admin.productcategory.index', compact('productCategories'));
+        return view('admin.productcategory.index', compact(['productCategories', 'number']));
 
     }
 
@@ -42,7 +43,7 @@ class ProductCategoryController extends Controller
     {
         $productCategory = new ProductCategory();
         $productCategory->create($request->all());
-        return redirect('admin/productcategory');
+        return redirect()->back();
     }
 
     /**
