@@ -96,6 +96,12 @@ class ProductCategoryController extends Controller
         //
         
         $productCategory = ProductCategory::find($id);
+         $this->validate($request,[
+                        'name' => 'required|max:100',
+                    ],[
+                        'name.required' => ' The role name field is required.',
+                        'name.max' => ' The role name may not be greater than 100 characters.',
+                    ]);
         $productCategory->update($request->all());
         return redirect('admin/productcategory');
     }
