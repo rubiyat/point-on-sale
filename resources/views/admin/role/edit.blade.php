@@ -25,8 +25,7 @@
         <div class="form-group">
 
             <input type="submit" class="btn btn-primary" value="submit">
-            <a href="{{route('role.index')}}" class="btn btn-default">Cancel</a>
-
+            <button type="button" onclick="window.location.href='{{route('role.index')}}'" class="btn btn-default">Cancel</button>
         </div>
     </form>
 </div>

@@ -15,9 +15,10 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::all();
+        $roles = Role::orderBy('id', 'DESC')->get(['id','name','description','status']);
+        $number = 1;
 
-        return view('admin.role.index', compact('roles'));
+        return view('admin.role.index', compact('roles','number'));
     }
 
     /**
@@ -40,7 +41,7 @@ class RoleController extends Controller
     {
         $roles = new Role();
         $roles->create($request->all());
-        return redirect('admin/role');
+        return redirect()->back();
     }
 
     /**
