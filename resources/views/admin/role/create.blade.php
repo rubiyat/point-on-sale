@@ -15,6 +15,17 @@
         <input type="text" class="form-control col-md-12" id="Name" name="name">
       </div>
       <div class="form-group">
+        <label for="Description"><h5>Description</h5></label>
+        <textarea class="form-control col-md-12"  id="Description" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="Status"><h5>Status</h5></label>
+        <select class="form-control" name="status">
+          <option value="0">Active</option>
+          <option value="1">Inactive</option>
+        </select>
+      </div>
+      <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
         <a class="btn btn-default" href="{{route('role.index')}}">Cancel</a>
       </div>

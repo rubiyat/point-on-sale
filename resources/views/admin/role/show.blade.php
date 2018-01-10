@@ -11,7 +11,7 @@
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <th><b>Role Id:</b></th>
+	        <td><b>Role Id:</b></td>
 		       
 		      
 	        		<td>{{$role->id}}</td>
@@ -19,7 +19,7 @@
 	      </tr>
 
 	      <tr>
-	        <th><b>Role Name:</b></th>
+	        <td><b>Role Name:</b></td>
 	       
 		       
 	        		<td>{{$role->name}}</td>
@@ -31,7 +31,7 @@
 
 		<!--Start Buttton -->
 
-		<a href="{{ route('productcategory.index') }}"><button type="button" class="btn btn-info">Back</button></a>
+		<a href="{{ route('role.index') }}"><button type="button" class="btn btn-info">Back</button></a>
 </div>
 
 @stop
