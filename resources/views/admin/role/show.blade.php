@@ -11,18 +11,18 @@
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <td><b>Role Id:</b></td>
+	        <td><b>Role Description:</b></td>
 		       
 		      
-	        		<td>{{$role->id}}</td>
+	        		<td>{{$role->description}}</td>
 	        
 	      </tr>
 
 	      <tr>
-	        <td><b>Role Name:</b></td>
+	        <td><b>Role Status:</b></td>
 	       
 		       
-	        		<td>{{$role->name}}</td>
+	        		<td>{{$role->status}}</td>
 	      
 	      </tr>
 	      
