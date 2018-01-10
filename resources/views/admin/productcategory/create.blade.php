@@ -4,14 +4,25 @@
 
 <div class="col-sm-12">
   <h3>Add New Product Category</h3>
+  @if(count($errors))
+      <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.
+        <br/>
+        <ul>
+          @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
   <form action="{{route('productcategory.store')}}" method="POST">
     {{ csrf_field() }}
 
-      <div class="form-group">
+      <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
         <label for="Name"><h5>Category Name</h5></label>
        
-          <input type="text" class="form-control" id="Name" name="name">
-   
+        <input type="text" class="form-control" id="Name" name="name">
+        <span class="text-danger">{{ $errors->first('name') }}</span>
       </div>
       <div class="form-group">
         <label for="Description">Description</label>

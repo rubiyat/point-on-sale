@@ -42,6 +42,15 @@ class ProductCategoryController extends Controller
     public function store(Request $request)
     {
         $productCategory = new ProductCategory();
+
+        $this->validate($request,[
+                        'name' => 'required|unique:product_categories|max:100',
+                    ],[
+                        'name.required' => ' The role name field is required.',
+                        'name.max' => ' The role name may not be greater than 100 characters.',
+                        'name.unique' => ' It seems role name already exist',
+                    ]);
+
         $productCategory->create($request->all());
         return redirect()->back();
     }

@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <label for="Name"><h5>Name</h5></label> 
-        <input type="text" class="form-control col-md-12" id="Name" name="name">
+        <input type="text" class="form-control col-md-12" id="Name" name="name" required>
       </div>
       <div class="form-group">
         <label for="Description"><h5>Description</h5></label>
