@@ -17,9 +17,9 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->text('description')->nullable();
-            $table->float('price');
+            $table->float('price', 8, 2);
             $table->string('image')->nullable();
-            $table->float('vat_rate');
+            $table->float('vat_rate', 8, 2);
             $table->integer('product_category_id')->unsigned();
             $table->boolean('status')->default(1);
 

@@ -4,15 +4,13 @@
 
           <div class="col-md-12">
           <h3>Add New Product</h3>
-          <hr>
-
 
       <form action="{{route('products.store')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }}
       
       <div class="form-group">
         <label for="Status"><h5>Product Category Name</h5></label><br>
-        <select class="form-controls" name="product_category_id">      
+        <select class="form-control" name="product_category_id">      
            <option value="">Choose Options</option> 
            @foreach($productCategories as $productCategory)
            <option value="{{$productCategory->id}}">{{$productCategory->name}}</option> 
@@ -22,7 +20,7 @@
 
       <div class="form-group">
         <label for="Name"><h5>Product Name</h5></label>
-        <input type="text" class="form-control col-md-12" id="Name" name="name">  
+        <input type="text" class="form-control" id="Name" name="name">  
       </div>
       <div class="form-group">
         <label for="Description"><h5>Description</h5></label>
@@ -30,11 +28,11 @@
       </div>
       <div class="form-group">
         <label for="Name"><h5>Price</h5></label>
-        <input type="name" class="form-control col-md-12" id="Name" name="price">
+        <input type="name" class="form-control" id="Name" name="price">
       </div>
       <div class="form-group">
         <label for="Name"><h5>Vat Rate</h5></label>
-        <input type="text" class="form-control col-md-12" id="Name" name="vate_rate">   
+        <input type="text" class="form-control" id="Name" name="vat_rate">   
       </div>
       <div class="form-group">
         <label for="File"><h5>Image</h5></label>
@@ -42,14 +40,14 @@
       </div>
     <div class="form-group">
         <label for="Status"><h5>Status</h5></label><br>
-      <select class="form-controls" name="status">
-          <option value="1">Approve</option>
-          <option value="2">Unapprove</option>
+      <select class="form-control" name="status">
+          <option value="0">Active</option>
+          <option value="1">Inactive</option>
       </select>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
-        <button type="submit" class="btn btn-default">Cancel</button>
+        <button type="button" class="btn btn-default" onclick="window.location.href='{{route('products.index')}}'">Cancel</button>
       </div>
 
 <form/>

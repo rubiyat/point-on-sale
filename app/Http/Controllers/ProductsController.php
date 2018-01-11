@@ -41,11 +41,14 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+      
         $products = new Products;
 
         $file = $request->file('image');
         $name = time() . $file->getClientOriginalName();
         $file->move('images',$name);
+
+
 
         $products->create($request->all());
         return redirect ('admin/products');

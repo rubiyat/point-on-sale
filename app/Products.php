@@ -12,7 +12,7 @@ class Products extends Model
     	'description',
     	'price',
     	'image',
-    	'vate_rate',
+    	'vat_rate',
     	'product_category_id',
     	'status'
     ];
