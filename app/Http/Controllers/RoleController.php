@@ -40,6 +40,15 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $roles = new Role();
+
+          $this->validate($request,[
+                        'name' => 'required|unique:roles|max:100',
+                    ],[
+                        'name.required' => ' The role name field is required.',
+                        'name.max' => ' The role name may not be greater than 100 characters.',
+                        'name.unique' => ' It seems role name already exist',
+                    ]);
+
         $roles->create($request->all());
         return redirect()->back();
     }
@@ -83,6 +92,14 @@ class RoleController extends Controller
     {
         //dd($request->all());
         $role = Role::find($id);
+
+        $this->validate($request,[
+                       'name' => 'required|max:100',
+                   ],[
+                       'name.required' => ' The role name field is required.',
+                       'name.max' => ' The role name may not be greater than 100 characters.',
+                   ]);
+        
         $role->update($request->all());
         return redirect('admin/role');
     }
@@ -95,7 +112,7 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        Role::findorFail($id)->delete();
+        Role::findOrFail($id)->delete();
         return redirect('admin/role');
     }
 }

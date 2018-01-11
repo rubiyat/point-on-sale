@@ -39,7 +39,7 @@
                        
                         <form action="{!! action('RoleController@destroy', $role->id) !!}" method="POST" style="display: inline-block;">
                             {{ csrf_field() }} {{ method_field('DELETE') }}
-                            <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
+                           <button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
                         </form>        
 
                     </td>

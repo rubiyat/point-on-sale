@@ -32,15 +32,6 @@
 	        		<td>{{$role->description}}</td>
 	        
 	      </tr>
-
-	      <tr>
-	        <td><b>Role Status:</b></td>
-	       
-		       
-	        		<td>{{$role->status}}</td>
-	      
-	      </tr>
-	      
 	    </tbody>
 	</table>
 	<div class="row">
@@ -52,13 +43,13 @@
 				 !!}
 			</div>
 			<div class="col-sm-6">
+				<button style="margin-right: 5px;" class="btn btn-warning" onclick="window.location.href='{{route('role.edit', $role->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i> Edit</button>
+				<form action="{!! action('RoleController@destroy', $role->id) !!}" method="POST" style="display: inline-block;">
+                    {{ csrf_field() }} {{ method_field('DELETE') }}
+                    <button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i> Delete</button>
+                </form>    
 				
-				<form style="margin-right: 5px;" class="pull-right" action="{!! action('RoleController@destroy', $role->id) !!}" method="POST" style="display: inline-block;">
-					{{ csrf_field() }} {{ method_field('DELETE') }}
-					<button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i> Delete</button>
-				</form>
 				
-				<button style="margin-right: 5px;" class="btn btn-warning pull-right" onclick="window.location.href='{{route('role.edit', $role->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i> Edit</button>
 			</div>
 			<div class="clearfix"></div>
 		</div>
