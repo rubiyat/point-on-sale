@@ -31,10 +31,15 @@
                     <tr>
 
                         <td>{{$product->id}}</td>
+                        <td>{{$product->productCategory->name}}</td>
                         <td>{{$product->name}}</td>
-                        <td>{{$product->description}}</td>
                         <td>{{$product->price}}</td>
-                        <td>{{$product->vate_rate}}</td>
+                        <td>
+                            {!! ($product->status == 0) ? 
+                                '<span class="label label-success">Active</span>' :
+                                '<span class="label label-danger">Inactive</span>'
+                             !!}
+                        </td>
 
                         <td >
                             <a href="{{route('products.show', $product->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
