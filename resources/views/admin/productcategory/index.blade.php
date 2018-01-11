@@ -44,12 +44,10 @@
                                         <button class="btn btn-info" onclick="window.location.href='{{route('productcategory.show', $productCategory->id)}}'"><i class="glyphicon glyphicon-eye-open" title="Show"></i></button>
 
                                         <button class="btn btn-warning" onclick="window.location.href='{{route('productcategory.edit', $productCategory->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i></button>
-                                        
-                                       <!--  <input type="submit" name="submit" value="Delete"> -->
-                                        <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
-                                        {{ csrf_field() }} {{ method_field('DELETE') }}
-                                         <form action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST">
-                                   
+                                       
+                                         <form action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST" style="display: inline-block;">
+                                          {{ csrf_field() }} {{ method_field('DELETE') }}
+                                            <button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
                                         </form>
 
                                     </td>

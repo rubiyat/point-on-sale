@@ -43,13 +43,13 @@
 				 !!}
 			</div>
 			<div class="col-sm-6">
+				<button style="margin-right: 5px;" class="btn btn-warning" onclick="window.location.href='{{route('productcategory.edit', $productCategory->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i> Edit</button>
 				
-				<form style="margin-right: 5px;" class="pull-right" action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST" style="display: inline-block;">
+				<form style="display: inline-block;" action="{!! action('ProductCategoryController@destroy', $productCategory->id) !!}" method="POST" style="display: inline-block;">
 					{{ csrf_field() }} {{ method_field('DELETE') }}
-					<button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i> Delete</button>
+					<button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i> Delete</button>
 				</form>
 				
-				<button style="margin-right: 5px;" class="btn btn-warning pull-right" onclick="window.location.href='{{route('productcategory.edit', $productCategory->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i> Edit</button>
 			</div>
 			<div class="clearfix"></div>
 		</div>
