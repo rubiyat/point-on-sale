@@ -50,7 +50,7 @@ class SupplierController extends Controller
         $supplier = new Supplier();
         $supplier->create($request->all());
 
-        return redirect('admin/supplier');
+        return redirect()->back();
     
     }
 
