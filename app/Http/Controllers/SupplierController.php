@@ -18,8 +18,9 @@ class SupplierController extends Controller
     {
 
         $suppliers = Supplier::all();
+         $number = 1;
 
-        return view('admin.supplier.index', compact('suppliers'));
+        return view('admin.supplier.index', compact('suppliers', 'number'));
 
     }
 

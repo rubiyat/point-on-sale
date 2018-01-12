@@ -52,7 +52,7 @@ class ProductsController extends Controller
 
 
         $products->create($request->all());
-        return redirect ('admin/products');
+        return redirect()->back();
 
     }
 

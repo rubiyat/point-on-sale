@@ -42,13 +42,10 @@
 			<input type="text" name="phone" class="form-control">
 		</div>
 
-
-
-			<input type="submit" name="save_supplier" class="btn btn-primary" value="Save">
-
-			<a href="{{route('supplier.index')}}" class="btn btn-danger"><i class="icon-trash"></i><span class="hidden-tablet"> Cancel</span></a>
-
-	
+		<div class="form-group">
+        	<button type="submit" class="btn btn-primary">Save</button>
+        	<button type="button" onclick="window.location.href='{{route('supplier.index')}}'" class="btn btn-default">Cancel</button>
+      	</div>
 
 	</form>
 </div>
