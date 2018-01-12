@@ -100,10 +100,11 @@
                     </li>
                     <li><a href="{{url('/admin/productcategory')}}" target="_blank"><span class="fa fa-cubes"></span> Product Category</a></li>
                     <li><a href="{{url('/admin/role')}}"><span class="fa fa-list" aria-hidden="true"></span><span class="hidden-tablet"> Role</span></a></li>
+                    <li><a href="{{url('/admin/products')}}"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span><span class="hidden-tablet"> Products</span></a></li>
                     
                         <li><a href="{{url('/admin/supplier')}}"><i class="" aria-hidden="true"></i><span class="hidden-tablet"> Suppliers</span></a></li>
                        
-                        <li><a href="{{url('/admin/products')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Products</span></a></li>
+                      
                         <li><a href="{{url('/admin/customer')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Customer</span></a></li>
                         <li><a href="{{url('/admin/employee')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Employee</span></a></li>
                         <li><a href="{{url('/admin/purchase')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Purchase</span></a></li>

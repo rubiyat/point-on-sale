@@ -4,11 +4,12 @@
 
    <div class="col-sm-12">
  
-	<h1>Product Details</h1>
+	<h1>Products</h1>
 
     <div class="input-prepend">
-        <a href="{{route('products.create')}}" ><button type="button" class="btn btn-primary">Add New Product</button></a>
-    </div><br>
+        <button class="btn btn-primary" onclick="window.location.href='{{route('products.create')}}'"><i class="glyphicon glyphicon-plus"></i> Add New Product</button>
+        <button type="button" onclick="window.print();" class="btn btn-info" style="margin-left: 5px;"><i class="glyphicon glyphicon-print"> </i> Print</button>
+    </div><br><br>
 
         <table class="table table-bordered table-hover table-responsive">
             <thead>
@@ -17,7 +18,7 @@
                 <th>Product Category Name</th>
                 <th>Product Name</th>
                 <th>Price</th>
-                <th>Vate Rate</th>
+                <th>Status</th>
                 <th>Action</th>              
             </tr>
             </thead>
@@ -30,7 +31,7 @@
 
                     <tr>
 
-                        <td>{{$product->id}}</td>
+                        <td>{{$number++}}</td>
                         <td>{{$product->productCategory->name}}</td>
                         <td>{{$product->name}}</td>
                         <td>{{$product->price}}</td>
@@ -42,21 +43,14 @@
                         </td>
 
                         <td >
-                            <a href="{{route('products.show', $product->id)}}"><button type="button" class="btn btn-primary">Show</button></a>
+                           
+                            <button class="btn btn-info" onclick="window.location.href='{{route('products.show', $product->id)}}'"><i class="glyphicon glyphicon-eye-open" title="Show"></i></button>
 
-                            <a href="{{route('products.edit', $product->id)}}"><button type="button" class="btn btn-info">Edit</button></a>
-
-
-
-                            <form action="{!! action('ProductsController@destroy', $product->id) !!}" method="POST">
-
-                                {{csrf_field()}}
-
-                                {{method_field('DELETE')}}
-
-                                <input class="btn btn-danger" type="submit" name="submit" value="Delete">     
-
-                                
+                            <button class="btn btn-warning" onclick="window.location.href='{{route('products.edit', $product->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i></button>
+                            
+                             <form action="{!! action('ProductsController@destroy', $product->id) !!}" method="POST" style="display: inline-block;">
+                              {{ csrf_field() }} {{ method_field('DELETE') }}
+                                <button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
                             </form>
                         </td>
 
