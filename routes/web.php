@@ -35,7 +35,7 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/employee', 'EmployeeController');
 
-    Route::resource('admin/purchase', 'PurchaseController');
+    Route::resource('admin/purchase', 'PurchasesController');
 
 
 

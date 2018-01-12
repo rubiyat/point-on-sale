@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ProductCategory;
-use App\Products;
+use App\Product;
 use App\Photo;
 
 class ProductsController extends Controller
@@ -16,7 +16,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Products::all();
+        $products = Product::all();
         return view('admin.products.index', compact('products'));
     }
 
@@ -42,7 +42,7 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
       
-        $products = new Products;
+        $products = new Product;
 
         $file = $request->file('image');
         $name = time() . $file->getClientOriginalName();
@@ -63,7 +63,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $products = Products::findOrFail($id);
+        $products = Product::findOrFail($id);
         return view('admin.products.show', compact(['products']));
     }
 
@@ -75,7 +75,7 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        $products = Products::findorfail($id);
+        $products = Product::findorfail($id);
         $productCategories = ProductCategory::get(['id', 'name']);
         return view('admin.products.edit', compact('products','productCategories'));
     }
@@ -89,7 +89,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $products = Products::find($id);
+        $products = Product::find($id);
         $products->update($request->all());
         return redirect('admin/products');
     }
@@ -102,7 +102,7 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-         $products = Products::findOrFail($id);
+         $products = Product::findOrFail($id);
 
         $products->delete();
 
