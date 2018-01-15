@@ -108,6 +108,7 @@
                         <li><a href="{{url('/admin/customer')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Customer</span></a></li>
                         <li><a href="{{url('/admin/employee')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Employee</span></a></li>
                         <li><a href="{{url('/admin/purchase')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Purchase</span></a></li>
+                         <li><a href="{{url('/admin/sales')}}"><i class="icon-list-alt" aria-hidden="true"></i><span class="hidden-tablet"> Sales</span></a></li>
                     <li class="ripple">
                       <a class="tree-toggle nav-header">
                         <span class="fa-diamond fa"></span> Layout

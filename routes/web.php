@@ -37,6 +37,10 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/purchase', 'PurchasesController');
 
+    Route::resource('admin/sales', 'SalesController');
+
+
+
 
 
 	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
