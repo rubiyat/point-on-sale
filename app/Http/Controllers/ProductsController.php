@@ -45,6 +45,19 @@ class ProductsController extends Controller
       
         $products = new Product;
 
+        $this->validate($request,[
+                        'product_category_id' => 'required',
+                        'name' => 'required|max:100',
+                        'price' => 'required',
+                        'vat_rate' => 'required',
+                    ],[
+                        'product_category_id.required' => ' The product category field is required.',
+                        'name.required' => ' The product name field is required.',
+                        'name.max' => ' The role name may not be greater than 100 characters.',
+                        'price.required' => ' The price field is required.',
+                        'vat_rate.required' => ' The vat_rate field is required.',
+                    ]);
+
         $file = $request->file('image');
         $name = time() . $file->getClientOriginalName();
         $file->move('images',$name);
@@ -91,6 +104,19 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         $products = Product::find($id);
+
+           $this->validate($request,[
+                        'product_category_id' => 'required',
+                        'name' => 'required|max:100',
+                        'price' => 'required',
+                        'vat_rate' => 'required',
+                    ],[
+                        'product_category_id.required' => ' The product category field is required.',
+                        'name.required' => ' The product name field is required.',
+                        'name.max' => ' The role name may not be greater than 100 characters.',
+                        'price.required' => ' The price field is required.',
+                        'vat_rate.required' => ' The vat_rate field is required.',
+                    ]);
         $products->update($request->all());
         return redirect('admin/products');
     }
