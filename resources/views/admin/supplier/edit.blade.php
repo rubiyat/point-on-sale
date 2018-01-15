@@ -7,7 +7,7 @@
 	
 
 	<h1>Edit Supplier</h1>
-	
+
 	@if(count($errors))
 	    <div class="alert alert-danger">
 	      <strong>Whoops!</strong> There were some problems with your input.
@@ -24,16 +24,6 @@
 	<form method="post" action="{{route('supplier.update',$supplier->id)}}">
 
 		{{ csrf_field() }} {{ method_field('PATCH') }}
-		
-		<div class="form-group">	
-			<label for="first_name"><b>First Name:</b></label>
-			<input type="text" name="first_name" class="form-control" value="{{$supplier->first_name}}">
-		</div>
-
-		<div class="form-group">	
-			<label for="last_name"><b>Last Name:</b></label>
-			<input type="text" name="last_name" class="form-control" value="{{$supplier->last_name}}">
-		</div>
 
 		<div class="form-group">	
 			<label for="company_name"><b>Company Name:</b></label>
