@@ -32,9 +32,7 @@ class SupplierController extends Controller
     public function create()
     {
         
-        $suppliers = Supplier::pluck('first_name', 'last_name','id')->all();
-        
-        return view('admin.supplier.create', compact('suppliers'));
+        return view('admin.supplier.create');
 
     }
 
@@ -48,6 +46,20 @@ class SupplierController extends Controller
     {
         
         $supplier = new Supplier();
+
+        $this->validate($request,[
+                                   'company_name' => 'required|unique:suppliers|max:100',
+                                   'email' => 'required|unique:suppliers|max:100',
+                               ],[
+                                   'company_name.required' => ' The company name field is required.',
+                                   'company_name.max' => ' The company name may not be greater than 100 characters.',
+                                   'company_name.unique' => ' It seems company name already exist',
+
+                                   'email.required' => ' The email field is required.',
+                                   'email.max' => ' The email may not be greater than 100 characters.',
+                                   'email.unique' => ' It seems email already exist',
+                               ]);
+
         $supplier->create($request->all());
 
         return redirect()->back();
@@ -92,6 +104,20 @@ class SupplierController extends Controller
     public function update(Request $request, $id)
     {
         $supplier = Supplier::find($id);
+
+        $this->validate($request,[
+                                   'company_name' => 'required|unique:suppliers|max:100',
+                                   'email' => 'required|unique:suppliers|max:100',
+                               ],[
+                                   'company_name.required' => ' The company name field is required.',
+                                   'company_name.max' => ' The company name may not be greater than 100 characters.',
+                                   'company_name.unique' => ' It seems company name already exist',
+
+                                   'email.required' => ' The email field is required.',
+                                   'email.max' => ' The email may not be greater than 100 characters.',
+                                   'email.unique' => ' It seems email already exist',
+                               ]);
+        
         $supplier->update($request->all());
         return redirect('admin/supplier');
     }

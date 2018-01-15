@@ -7,20 +7,22 @@
 	
 
 	<h1>Add New Supplier</h1>
+	@if(count($errors))
+	    <div class="alert alert-danger">
+	      <strong>Whoops!</strong> There were some problems with your input.
+	      <br/>
+	      <ul>
+	        @foreach($errors->all() as $error)
+	        <li>{{ $error }}</li>
+	        @endforeach
+	      </ul>
+	    </div>
+	  @endif
+
 	
 	<form method="post" action="{{route('supplier.store')}}">
 
 		{{ csrf_field() }}
-		
-		<div class="form-group">	
-			<label for="first_name"><b>First Name:</b></label>
-			<input type="text" name="first_name" class="form-control">
-		</div>
-
-		<div class="form-group">	
-			<label for="last_name"><b>Last Name:</b></label>
-			<input type="text" name="last_name" class="form-control">
-		</div>
 
 		<div class="form-group">	
 			<label for="company_name"><b>Company Name:</b></label>

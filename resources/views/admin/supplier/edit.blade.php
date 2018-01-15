@@ -6,7 +6,20 @@
 <div class="col-sm-12">
 	
 
-	<h1>Add New Supplier</h1>
+	<h1>Edit Supplier</h1>
+	
+	@if(count($errors))
+	    <div class="alert alert-danger">
+	      <strong>Whoops!</strong> There were some problems with your input.
+	      <br/>
+	      <ul>
+	        @foreach($errors->all() as $error)
+	        <li>{{ $error }}</li>
+	        @endforeach
+	      </ul>
+	    </div>
+	  @endif
+
 	
 	<form method="post" action="{{route('supplier.update',$supplier->id)}}">
 
