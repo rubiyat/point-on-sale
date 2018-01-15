@@ -15,12 +15,12 @@ class CreateSuppliersTable extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('company_name');
-            $table->string('address');
-            $table->string('email');
-            $table->string('phone');
+
+            $table->string('company_name', 100)->unique();
+            $table->string('address', 100);
+            $table->string('email', 100);
+            $table->string('phone', 50);
+
             $table->timestamps();
         });
     }
