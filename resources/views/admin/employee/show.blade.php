@@ -55,7 +55,7 @@
 		        <th><b>Image:</b></th>
 
 		    
-		        	<td><img height="100" src="{{$employee->image ? $employee->image : "http://placehold.it/400x400"}}"/></td>
+		        	<td><img height="100" src="{{$employee->image ? $employee->image : 'http://placehold.it/400x400'}}"/></td>
 		      
 		      </tr>
 		      <tr>

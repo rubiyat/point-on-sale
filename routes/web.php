@@ -39,21 +39,7 @@ Route::group(['middleware'=>'web'], function(){
 
     Route::resource('admin/sales', 'SalesController');
 
-
-
-
-
-	// Route::resource('admin/productcategory', 'ProductCategoryController',['names'=>[
-
-
- //    	'index'=>'admin.productcategory.index',
- //    	'create'=>'admin.productcategory.create',
- //    	'store'=>'admin.productcategory.store',
- //    	'edit'=>'admin.productcategory.edit',
- //        'show'=>'admin.productcategory.show',
-
-
-	// ]]);
+    Route::resource('admin/photos', 'PhotosController');
 
 });
 
