@@ -20,10 +20,9 @@ class CreateProductsTable extends Migration
             $table->float('price', 8, 2);
             $table->string('image')->nullable();
             $table->float('vat_rate', 8, 2);
-            $table->integer('product_category_id')->unsigned();
+
             $table->boolean('status')->default(1);
 
-            $table->foreign('product_category_id')->references('id')->on('product_categories')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
         });
     }

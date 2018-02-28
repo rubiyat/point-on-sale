@@ -26,14 +26,15 @@
                       
                         <td>{{$photo->id}}</td>
                         <td><img height="100" width="150" src="{{asset('/images/'.$photo->file)}}"/></td>   
-                        <td>
-                            <form action="{!! action('Photos@destroy', $photo->id) !!}" method="POST" style="display: inline-block;">
-                                {{ csrf_field() }} {{ method_field('DELETE') }}
+                        <td><button class="btn btn-info" onclick="window.location.href='{{route('photos.show', $photo->id)}}'"><i class="glyphicon glyphicon-eye-open" title="Show"></i></button>
+                            <button class="btn btn-warning" onclick="window.location.href='{{route('photos.edit', $photo->id)}}'"><i class="glyphicon glyphicon-pencil" title="Edit"></i></button>
+                            <form action="{!! action('PhotosController@destroy', $photo->id) !!}" method="POST" style="display: inline-block;">
+                                        {{ csrf_field() }} {{ method_field('DELETE') }}
                                 <button type="submit" role="button" class="btn btn-danger"><i class="glyphicon glyphicon-trash" title="Delete"></i></button>
                             </form>
                         </td>
 
-                            </tr>
+
                             @endforeach
 
                        </tbody> 
