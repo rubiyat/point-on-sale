@@ -1,4 +1,8 @@
-@extends('layouts.admin')
+@extends('layouts.backend.app')
+
+@push('css')
+
+@endpush
 
 @section('content')
 
@@ -61,3 +65,7 @@
         </div>
 
 @stop
+
+@push('js')
+
+@endpush
