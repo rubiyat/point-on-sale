@@ -7,6 +7,9 @@
 
         <title>Cluster Shop</title>
 
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon/cluster.png')}}" />
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 

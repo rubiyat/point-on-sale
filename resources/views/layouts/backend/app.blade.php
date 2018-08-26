@@ -10,6 +10,9 @@
 
     <title>Cluster Shop</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon/cluster.png')}}" />
+
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="{{ asset('assets/backend/css/bootstrap.min.css') }}">
     <!-- Font Awesome -->

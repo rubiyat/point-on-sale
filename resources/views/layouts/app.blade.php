@@ -10,7 +10,8 @@
 
     <title>Cluster Shop</title>
 
-     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/me.jpg')}}" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon/cluster.png')}}" />
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
