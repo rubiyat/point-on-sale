@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Sharif Mohammad</title>
+    <title>Cluster Shop</title>
 
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="{{ asset('assets/backend/css/bootstrap.min.css') }}">
