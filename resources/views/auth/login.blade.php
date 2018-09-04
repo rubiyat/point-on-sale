@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading"><h2>Log In</h2></div><br>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -51,9 +51,19 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
+                                <div class="w3ls-ribbon">
+                <div class="ribbon-wrapper">
+                    <div class="glow">&nbsp;</div>
+                                <div class="ribbon-front">
+                                <button type="submit" class="btn btn-primary submit">
+                                    Log In
                                 </button>
+                                <i class="fa fa-sign-in-alt"></i>
+                            </div>
+                            </div>
+            </div>
+
+                                 
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?

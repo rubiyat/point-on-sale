@@ -26,14 +26,14 @@
     <style>
 
 body {
-   /* background: url(../images/bg2.jpg)no-repeat 0px 0px;
+
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    background-attachment: fixed;*/
-    background:#3c6fe7;
+    background-attachment: fixed;
+    background:#d2ffaa;
     text-align: center;
     font-family: 'Cabin', sans-serif;
     margin-top: 80px;
@@ -43,8 +43,50 @@ body {
     clear:both;
 }
 
-.card{
-    background-color: #f7f72a;
+.form-horizontal  input[type="text"]{ 
+    width:30%;
+    padding:10px;
+    margin:25px 0px;
+    font-weight: bold;
+    
+}
+
+.form-horizontal  input[type="email"]{ 
+    width:30%;
+    padding:10px;
+    margin:25px 0px;
+    font-weight: bold;
+    
+}
+
+.form-horizontal  input[type="password"]{ 
+    width:30%;
+    padding:10px;
+    margin:25px 0px;
+    
+}
+
+.form-horizontal  button[type="submit"]{ 
+    width:16%;
+    padding:10px;
+    margin:25px 0px;
+    background: #41c1f4;
+    border: #41c1f4;
+    font-weight: bold;
+}
+
+.form-horizontal  a{ 
+    color: #41c1f4;
+}
+
+.form-horizontal  a:hover{ 
+    color: #788478;
+}
+
+.ml-auto .nav-item .nav-link{
+    border: 1px solid black;
+    float: left;
+
 }
 
 
@@ -57,9 +99,9 @@ body {
                 <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -70,20 +112,20 @@ body {
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
+                       <!--  @guest -->
+                           <!--  <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
-                            <li class="nav-item dropdown">
+                            </li> -->
+                       <!--  @else -->
+                            <!-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                                </a> -->
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <!--  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -93,10 +135,10 @@ body {
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
+                                </div> -->
+                            <!-- </li>
                         @endguest
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>
